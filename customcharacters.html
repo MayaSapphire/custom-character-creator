@@ -1,0 +1,689 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Custom Character Creator
+        </title>
+    </head>
+    <body>
+        <h1>
+            Create custom characters for Mush: Respored
+        </h1>
+        <p>
+            Known limitations:<br>
+            - Emojis are not implemented, and the Custom Character Creator will default to 👤. <br>
+            - Input for traits and skills will not be validated here.<br>
+                Blahshroom will reject the import if funny business is attempted. <br>
+            - Newlines in the bio field will be removed upon submission.
+            <form>
+                <h2>Please fill out these fields:</h2>
+                <table>
+                    <tr>
+                        <td><label for="name">name: </label></td>
+                        <td><input type="text" name="name" placeholder="Name of the character" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="name_full">name_full: </label></td>
+                        <td><input type="text" name="name_full" placeholder="Full name of the character" required></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><label for="race">race: </label></td>
+                        <td><input type="text" name="race" placeholder="Race of the character" required value="Human"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="emoji">emoji: </label></td>
+                        <td>Not implemented. Will be 👤</td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="color">color: </label></td>
+                        <td><input type="color" name="color" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="image_url">image_url: </label></td>
+                        <td><input type="text" name="image_url" placeholder="Link to the image" required value="None"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="desc">desc: </label></td>
+                        <td><input type="text" name="desc" placeholder="Short description of the character"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="bio">bio: </label></td>
+                        <td><textarea name="bio" placeholder="Bio of the character" rows="3" cols = "50"></textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="gender">gender: </label></td>
+                        <td>
+                            <input type="radio" name="gender" value="female">
+                            <label for="gender">female</label>
+                            <input type="radio" name="gender" value="male">
+                            <label for="gender">male</label>
+                            <input type="radio" name="gender" value="other">
+                            <label for="gender">other</label>
+                            <input type="radio" name="gender" value="none">
+                            <label for="gender">none</label>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><label for="pronouns">pronouns: </label></td>
+                        <td>
+                            <input type="radio" name="pronouns" value="she/her">
+                            <label for="pronouns">she/her</label>
+                            <input type="radio" name="pronouns" value="he/him">
+                            <label for="pronouns">he/him</label>
+                            <input type="radio" name="pronouns" value="they/them">
+                            <label for="pronouns">they/them</label>
+                            <input type="radio" name="pronouns" value="it/it/its/itself">
+                            <label for="pronouns">it/its</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="gender">commander_priority: </label></td>
+                        <td><input type="number" name="commander_priority" min="1" max="100" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="comms_priority">comms_priority: </label></td>
+                        <td><input type="number" name="comms_priority" min="1" max="100" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="neron_priority">neron_priority: </label></td>
+                        <td><input type="number" name="neron_priority" min="1" max="100" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="glory_path">glory_path: </label></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><input type="radio" name="glory_path" value="anomalies">
+                                        <label for="glory_path">anomalies</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="artifacts">
+                                        <label for="glory_path">artifacts</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="astronomer">
+                                        <label for="glory_path">astronomer</label><br></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="glory_path" value="botanist">
+                                        <label for="glory_path">botanist</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="capricious">
+                                        <label for="glory_path">capricious</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="chef">
+                                        <label for="glory_path">chef</label><br></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="glory_path" value="commander">
+                                        <label for="glory_path">commander</label></td>
+                                    <td><input type="radio" name="glory_path" value="conqueror">
+                                        <label for="glory_path">conqueror</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="craftsman">
+                                        <label for="glory_path">craftsman</label><br></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="glory_path" value="dangerous">
+                                        <label for="glory_path">dangerous</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="defender">
+                                        <label for="glory_path">defender</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="designer">
+                                        <label for="glory_path">designer</label><br></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="glory_path" value="diplomat">
+                                        <label for="glory_path">diplomat</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="drones">
+                                        <label for="glory_path">drones</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="explorer">
+                                        <label for="glory_path">explorer</label><br></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="glory_path" value="fortunes">
+                                        <label for="glory_path">fortunes</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="generic">
+                                        <label for="glory_path">generic</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="healer">
+                                        <label for="glory_path">healer</label><br></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="glory_path" value="hunter">
+                                        <label for="glory_path">hunter</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="lover">
+                                        <label for="glory_path">lover</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="moh">
+                                        <label for="glory_path">moh</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="glory_path" value="mush_cure">
+                                        <label for="glory_path">mush_cure</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="mush_hunter">
+                                        <label for="glory_path">mush_hunter</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="mush_research">
+                                        <label for="glory_path">mush_research</label><br></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="glory_path" value="pilgred">
+                                        <label for="glory_path">pilgred</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="psychopath">
+                                        <label for="glory_path">psychopath</label></td>
+                                    <td><input type="radio" name="glory_path" value="rebel">
+                                        <label for="glory_path">rebel</label><br></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="glory_path" value="shipshape">
+                                        <label for="glory_path">shipshape</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="trader">
+                                        <label for="glory_path">trader</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="xeno_research">
+                                        <label for="glory_path">xeno_research</label><br></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="glory_path" value="xyloph">
+                                        <label for="glory_path">xyloph</label><br></td>
+                                    <td><input type="radio" name="glory_path" value="xyloph2">
+                                        <label for="glory_path">xyloph2</label><br></td>
+                                </tr>
+                                <td>
+                            </table>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td><label for="skills">skills: </label></td>
+                        <td>Select up to 7 skills, up to 1 of which can be Limited.<table>
+                                <tr>
+                                    <td>Common skills:</td>
+                                    <td><input type="checkbox" name="skills" value="Astrophysicist">
+                                        <label for="skills">Astrophysicist</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Biologist">
+                                        <label for="skills">Biologist</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Botanist">
+                                        <label for="skills">Botanist</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Builder">
+                                        <label for="skills">Builder</label></td>
+                                    </tr>
+                                    <tr>    
+                                        <td><input type="checkbox" name="skills" value="Charismatic">
+                                        <label for="skills">Charismatic</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Chef">
+                                        <label for="skills">Chef</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Chemist">
+                                        <label for="skills">Chemist</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Cosmologist">
+                                        <label for="skills">Cosmologist</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Creative">
+                                        <label for="skills">Creative</label></td>
+                                    </tr>
+                                    <tr>    
+                                        <td><input type="checkbox" name="skills" value="Designer">
+                                        <label for="skills">Designer</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Demolitions Expert">
+                                        <label for="skills">Demolitions Expert</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Determined">
+                                        <label for="skills">Determined</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Diplomat">
+                                        <label for="skills">Diplomat</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Engineer">
+                                        <label for="skills">Engineer</label></td>
+                                    </tr>
+                                    <tr>    
+                                        <td><input type="checkbox" name="skills" value="Fencer">
+                                        <label for="skills">Fencer</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Firefighter">
+                                        <label for="skills">Firefighter</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Hauler">
+                                        <label for="skills">Hauler</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="IT Expert">
+                                        <label for="skills">IT Expert</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Jack Of All Trades">
+                                        <label for="skills">Jack Of All Trades</label></td>
+                                    </tr>    
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Leader">
+                                        <label for="skills">Leader</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Logistics Expert">
+                                        <label for="skills">Logistics Expert</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Lucky">
+                                        <label for="skills">Lucky</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Medic">
+                                        <label for="skills">Medic</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Nurse">
+                                        <label for="skills">Nurse</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Pilot">
+                                        <label for="skills">Pilot</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Radio Expert">
+                                        <label for="skills">Radio Expert</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Robotics Expert">
+                                        <label for="skills">Robotics Expert</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Scavenger">
+                                        <label for="skills">Scavenger</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Shooter">
+                                        <label for="skills">Shooter</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Solid">
+                                        <label for="skills">Solid</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Sprinter">
+                                        <label for="skills">Sprinter</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Survivalist">
+                                        <label for="skills">Survivalist</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Tamer">
+                                        <label for="skills">Tamer</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Technician">
+                                        <label for="skills">Technician</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Tinker">
+                                        <label for="skills">Tinker</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="The Optimist
+                                        ">
+                                        <label for="skills">The Optimist</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unique skills:</td>
+                                        <td><input type="checkbox" name="skills" value="Analytical">
+                                        <label for="skills">Analytical</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Antique Perfume">
+                                        <label for="skills">Antique Perfume</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Blitz">
+                                        <label for="skills">Blitz</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Bodyguard">
+                                        <label for="skills">Bodyguard</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Caffeine Junkie">
+                                        <label for="skills">Caffeine Junkie</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Cold Blooded">
+                                        <label for="skills">Cold Blooded</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Confidant">
+                                        <label for="skills">Confidant</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Crazy Eye">
+                                        <label for="skills">Crazy Eye</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Daredevil">
+                                        <label for="skills">Daredevil</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Detached Crewmember">
+                                        <label for="skills">Detached Crewmember</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Devotion">
+                                        <label for="skills">Devotion</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Director">
+                                        <label for="skills">Director</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Electrician">
+                                        <label for="skills">Electrician</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Expert">
+                                        <label for="skills">Expert</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Fortune Teller">
+                                        <label for="skills">Fortune Teller</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Frugivore">
+                                        <label for="skills">Frugivore</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Genius">
+                                        <label for="skills">Genius</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Green Thumb">
+                                        <label for="skills">Green Thumb</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Gunner">
+                                        <label for="skills">Gunner</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Hair Trigger">
+                                        <label for="skills">Hair Trigger</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Hygienist">
+                                        <label for="skills">Hygienist</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Intimidating">
+                                        <label for="skills">Intimidating</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Keen Eye">
+                                        <label for="skills">Keen Eye</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Mankind's Only Hope">
+                                        <label for="skills">Mankind's Only Hope</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Meds Junkie">
+                                        <label for="skills">Meds Junkie</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Metalworker">
+                                        <label for="skills">Metalworker</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Motivator">
+                                        <label for="skills">Motivator</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Mycologist">
+                                        <label for="skills">Mycologist</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="NERON's Only Friend">
+                                        <label for="skills">NERON's Only Friend</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Observant">
+                                        <label for="skills">Observant</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Meticulous">
+                                        <label for="skills">Meticulous</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Opportunist">
+                                        <label for="skills">Opportunist</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Panic">
+                                        <label for="skills">Panic</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Physicist">
+                                        <label for="skills">Physicist</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Pickpocket">
+                                        <label for="skills">Pickpocket</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Politician">
+                                        <label for="skills">Politician</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Polymath">
+                                        <label for="skills">Polymath</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Polyvalent">
+                                        <label for="skills">Polyvalent</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Possession">
+                                        <label for="skills">Possession</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Premonition">
+                                        <label for="skills">Premonition</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Rebel">
+                                        <label for="skills">Rebel</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Self-Sacrifice">
+                                        <label for="skills">Self-Sacrifice</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Shrink">
+                                        <label for="skills">Shrink</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Sneak">
+                                        <label for="skills">Sneak</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Strateguru">
+                                        <label for="skills">Strateguru</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Supervisor">
+                                        <label for="skills">Supervisor</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Torturer">
+                                        <label for="skills">Torturer</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Tracker">
+                                        <label for="skills">Tracker</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Trailblazer">
+                                        <label for="skills">Trailblazer</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Treasure Hunter">
+                                        <label for="skills">Treasure Hunter</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="U-Turn">
+                                        <label for="skills">U-Turn</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Victimizer">
+                                        <label for="skills">Victimizer</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Watchman">
+                                        <label for="skills">Watchman</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Workaholic">
+                                        <label for="skills">Workaholic</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Limited skills:</td>
+                                        <td><input type="checkbox" name="skills" value="Apprentice">
+                                        <label for="skills">Apprentice</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Lethargy">
+                                        <label for="skills">Lethargy</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Paranoid">
+                                        <label for="skills">Paranoid</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Wrestler">
+                                        <label for="skills">Wrestler
+                                        </label></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>Act II exclusive skills:</td>
+                                        <td><input type="checkbox" name="skills" value="Blinker">
+                                        <label for="skills">Blinker</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Xenobiologist">
+                                        <label for="skills">Xenobiologist</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Perfect Vision">
+                                        <label for="skills">Perfect Vision</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Carefree">
+                                        <label for="skills">Carefree</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Contortionist">
+                                        <label for="skills">Contortionist</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Inspiration">
+                                        <label for="skills">Inspiration</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Blessing">
+                                        <label for="skills">Blessing</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Dragonscale">
+                                        <label for="skills">Dragonscale</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Carnivore">
+                                        <label for="skills">Carnivore</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="skills" value="Commandant">
+                                        <label for="skills">Commandant</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Brute Force">
+                                        <label for="skills">Brute Force</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Blacksmith">
+                                        <label for="skills">Blacksmith</label></td>
+                                        
+                                        <td><input type="checkbox" name="skills" value="Smelter">
+                                        <label for="skills">Smelter</label></td>
+                                    </tr>    
+                                </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                        <td><label for="traits">traits: </label></td>
+                        <td>Select up to 2 traits.<table>
+                            <tr>
+                                <td><input type="checkbox" name="traits" value="hat">
+                                    <label for="traits">Adventurer's Hat</label></td>
+                                <td><input type="checkbox" name="traits" value="Agoraphobia">
+                                    <label for="traits">Agoraphobia</label></td>
+                                <td><input type="checkbox" name="traits" value="Ailurophobia">
+                                    <label for="traits">Ailurophobia</label></td>
+                                
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="traits" value="Asocial">
+                                    <label for="traits">Asocial</label></td>
+                                <td><input type="checkbox" name="traits" value="bionicarm">
+                                    <label for="traits">Bionic Arm</label></td>
+                                <td><input type="checkbox" name="traits" value="Capricious">
+                                    <label for="traits">Capricious</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="traits" value="Cat Allergy">
+                                    <label for="traits">Cat Allergy</label></td>
+                                <td><input type="checkbox" name="traits" value="nills">
+                                    <label for="traits">Chronic Illness</label></td>
+                                <td><input type="checkbox" name="traits" value="Chronic Vertigo">
+                                    <label for="traits">Chronic Vertigo</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="traits" value="Depression">
+                                    <label for="traits">Depression</label></td>
+                                <td><input type="checkbox" name="traits" value="Disabled">
+                                    <label for="traits">Disabled</label></td>
+                                <td><input type="checkbox" name="traits" value="firsttime">
+                                    <label for="traits">First Timer</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="traits" value="Germaphobe">
+                                    <label for="traits">Germaphobe</label></td>
+                                <td><input type="checkbox" name="traits" value="Globophobia">
+                                    <label for="traits">Globophobia</label></td>
+                                <td><input type="checkbox" name="traits" value="hyper">
+                                    <label for="traits">Hyperactive</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="traits" value="Illiterate">
+                                    <label for="traits">Illiterate</label></td>
+                                <td><input type="checkbox" name="traits" value="Immunized">
+                                    <label for="traits">Immunized</label></td>
+                                <td><input type="checkbox" name="traits" value="Minor">
+                                    <label for="traits">Minor</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="traits" value="Pacifist">
+                                    <label for="traits">Pacifist</label></td>  
+                                <td><input type="checkbox" name="traits" value="Paranoia">
+                                    <label for="traits">Paranoia</label></td>
+                                <td><input type="checkbox" name="traits" value="sixthsense">
+                                    <label for="traits">Sixth Sense</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="traits" value="Telepath">
+                                    <label for="traits">Telepath</label></td>
+                                <td><input type="checkbox" name="traits" value="Weapon Phobia">
+                                    <label for="traits">Weapon Phobia</label></td>
+                            </tr>
+                    </table></td>
+                    </tr>
+                    <br>
+                    
+                
+                </table>
+                <input type="submit">
+                <br>
+                <textarea id="Output" rows="18" cols="100"></textarea>
+                <br>
+                Instructions for importing this loadout: <br>
+                1.  Copy the output. Select inside the text box, then hit CTRL+A followed by CTRL+C.<br>
+                2.  Paste the output into Blahshroom's DMs.<br>
+                3.  Convert the output into a text file. Press the + button next to the message, then do "Upload your message as a file". <br>
+                4.  Add the command "loadout import", hit Enter, and hope that it works.<br>
+            </form> 
+        </p>
+        <script>
+            
+            const urlParams = new URLSearchParams(window.location.search);
+
+            function sanitize(input) {
+                if (input == null) {
+                    return null
+                }
+                return input.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;").replace(/\//g, "&#x2F;").replaceAll('\r\n', '\\r\\n').replaceAll('\n', '\\n').replaceAll('\r', '\\r');
+            }
+            const name = sanitize(urlParams.get('name'));
+            const name_full = sanitize(urlParams.get('name_full'));
+            const race = sanitize(urlParams.get('race'));
+            const emoji = sanitize(urlParams.get('emoji'));
+            const color = sanitize(urlParams.get('color'));
+            const image_url = sanitize(urlParams.get('image_url'));
+            const desc = sanitize(urlParams.get('desc'));
+            const bio = sanitize(urlParams.get('bio'));
+            const gender = sanitize(urlParams.get('gender'));
+            const pronouns = sanitize(urlParams.get('pronouns'));
+            const commander_priority = sanitize(urlParams.get('commander_priority'));
+            const comms_priority = sanitize(urlParams.get('comms_priority'));
+            const neron_priority = sanitize(urlParams.get('neron_priority'));
+            const glory_path = sanitize(urlParams.get('glory_path'));
+
+            const skills = sanitize(urlParams.getAll('skills').join('","'));
+            const traits = sanitize(urlParams.getAll('traits').join('","'));
+
+            const output = `{
+            "name":"${name}",
+            "name_full":"${name_full}",
+            "race":"${race}",
+            "emoji":"👤",
+            "color":"${color}",
+            "image_url":"${image_url}",
+            "desc":"${desc}",
+            "bio":"${bio}",
+            "gender":"${gender}",
+            "pronouns":"${pronouns}",
+            "commander_priority":${commander_priority},
+            "comms_priority":${comms_priority},
+            "neron_priority":${neron_priority},
+            "glory_path":"${glory_path}",
+            "skills":["${skills}"],
+            "traits":["${traits}"]
+}`
+
+            document.getElementById("Output").innerHTML = output;
+
+        </script>
+    </body>
+</html>
