@@ -14,9 +14,11 @@
             - Emojis are not implemented, and the Custom Character Creator will default to 👤. <br>
             - Input for traits and skills will not be validated here.<br>
                 Blahshroom will reject the import if funny business is attempted. <br>
-            - Newlines in the bio field will be removed upon submission.
+            - Newlines in the bio field will be removed upon submission.<br>
+            - Probably doesn't work on mobile.<br>
+            - Color doesn't work.<br>
             <form>
-                <h2>Please fill out these fields:</h2>
+                <h2>Please fill out these fields:</h2> 
                 <table>
                     <tr>
                         <td><label for="name">name: </label></td>
@@ -556,7 +558,7 @@
                         <td><label for="traits">traits: </label></td>
                         <td>Select up to 2 traits.<table>
                             <tr>
-                                <td><input type="checkbox" name="traits" value="hat">
+                                <td><input type="checkbox" name="traits" value="hat" required>
                                     <label for="traits">Adventurer's Hat</label></td>
                                 <td><input type="checkbox" name="traits" value="Agoraphobia">
                                     <label for="traits">Agoraphobia</label></td>
