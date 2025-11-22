@@ -4,78 +4,99 @@
         <title>
             Custom Character Creator
         </title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            body {
+                margin-left: 100px;
+                margin-right:100px;
+
+                margin-top: 20px;
+                min-height:100vh;
+                font-family:sans-serif;
+                margin-bottom: 50px;
+            }
+            th, td {
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: left;
+
+            }
+            tr:nth-child(even) {background-color: #f2f2f2;}
+        </style>
     </head>
     <body>
         <h1>
             Create custom characters for Mush: Respored
         </h1>
         <p>
+            Usable link: <a href=https://mayasapphire.github.io/custom-character-creator/index.html>https://mayasapphire.github.io/custom-character-creator/index.html</a> <br><br>
             Known limitations:<br>
-            - Emojis are not implemented, and the Custom Character Creator will default to 👤. <br>
-            - Input for traits and skills will not be validated here.<br>
+            - Input for traits and skills will not be validated here.
                 Blahshroom will reject the import if funny business is attempted. <br>
-            - Newlines in the bio field will be removed upon submission.<br>
+            - This almost certainly has bugs.<br>
             - Probably doesn't work on mobile.<br>
-            - Color doesn't work.<br>
-            <form>
-                <h2>Please fill out these fields:</h2> 
+            <form id="theForm" action="#" onsubmit="event.preventDefault(); makeLoadout();">
                 <table>
                     <tr>
-                        <td><label for="name">name: </label></td>
+                        <td><label for="name">Name: </label></td>
                         <td><input type="text" name="name" placeholder="Name of the character" required></td>
                     </tr>
 
                     <tr>
-                        <td><label for="name_full">name_full: </label></td>
+                        <td><label for="name_full">Full name: </label></td>
                         <td><input type="text" name="name_full" placeholder="Full name of the character" required></td>
                     </tr>
                     
                     <tr>
-                        <td><label for="race">race: </label></td>
+                        <td><label for="race">Race: </label></td>
                         <td><input type="text" name="race" placeholder="Race of the character" required value="Human"></td>
                     </tr>
 
                     <tr>
-                        <td><label for="emoji">emoji: </label></td>
-                        <td>Not implemented. Will be 👤</td>
+                        <td><label for="emoji">Emoji: </label></td>
+                        <td><input type="text" name="emoji" placeholder="Emoji for the character" required value="👤"></td>
                     </tr>
 
                     <tr>
-                        <td><label for="color">color: </label></td>
+                        <td><label for="color">Color: </label></td>
                         <td><input type="color" name="color" required></td>
                     </tr>
 
                     <tr>
-                        <td><label for="image_url">image_url: </label></td>
+                        <td><label for="image_url">Image URL: </label></td>
                         <td><input type="text" name="image_url" placeholder="Link to the image" required value="None"></td>
                     </tr>
 
                     <tr>
-                        <td><label for="desc">desc: </label></td>
+                        <td><label for="desc">Description: </label></td>
                         <td><input type="text" name="desc" placeholder="Short description of the character"></td>
                     </tr>
 
                     <tr>
-                        <td><label for="bio">bio: </label></td>
+                        <td><label for="bio">Bio: </label></td>
                         <td><textarea name="bio" placeholder="Bio of the character" rows="3" cols = "50"></textarea></td>
                     </tr>
 
                     <tr>
-                        <td><label for="gender">gender: </label></td>
+                        <td><label for="gender">Gender: </label></td>
                         <td>
                             <input type="radio" name="gender" value="female">
-                            <label for="gender">female</label>
+                            <label for="gender">Female </label>
                             <input type="radio" name="gender" value="male">
-                            <label for="gender">male</label>
+                            <label for="gender">Male </label>
                             <input type="radio" name="gender" value="other">
-                            <label for="gender">other</label>
+                            <label for="gender">Other </label>
                             <input type="radio" name="gender" value="none">
-                            <label for="gender">none</label>
+                            <label for="gender">None </label>
                         </td>
                     </tr>
                     
                     <tr>
-                        <td><label for="pronouns">pronouns: </label></td>
+                        <td><label for="pronouns">Pronouns: </label></td>
                         <td>
                             <input type="radio" name="pronouns" value="she/her">
                             <label for="pronouns">she/her</label>
@@ -89,116 +110,323 @@
                     </tr>
 
                     <tr>
-                        <td><label for="gender">commander_priority: </label></td>
+                        <td><label for="gender">Commander priority: </label></td>
                         <td><input type="number" name="commander_priority" min="1" max="100" required></td>
                     </tr>
 
                     <tr>
-                        <td><label for="comms_priority">comms_priority: </label></td>
+                        <td><label for="comms_priority">Comms officer priority: </label></td>
                         <td><input type="number" name="comms_priority" min="1" max="100" required></td>
                     </tr>
 
                     <tr>
-                        <td><label for="neron_priority">neron_priority: </label></td>
+                        <td><label for="neron_priority">NERON administrator priority: </label></td>
                         <td><input type="number" name="neron_priority" min="1" max="100" required></td>
                     </tr>
 
                     <tr>
-                        <td><label for="glory_path">glory_path: </label></td>
+                        <td><label for="glory_path">Glory path: </label></td>
                         <td>
                             <table>
                                 <tr>
                                     <td><input type="radio" name="glory_path" value="anomalies">
-                                        <label for="glory_path">anomalies</label><br></td>
+                                        <label for="glory_path">
+                                                <span
+                                                title="gold: Nano-Ladybugs
+difficulty: 2
+plush: astro
+flavor: Space is full of wonders and secrets hiding among the stars, just waiting to be found. You want to see it all.
+desc: - 2 Glory for every spatial anomaly you discover.
+- 4 Glory for every anomaly the Daedalus visits.">
+                                                anomalies</span>
+                                        </label><br></td>
                                     <td><input type="radio" name="glory_path" value="artifacts">
-                                        <label for="glory_path">artifacts</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: SNC Kitchen
+difficulty: 4
+plush: shoot
+flavor: As an intergalactic explorer, your dream is to amass a vast hoard of alien artifacts... and keep them to yourself, obviously!
+desc: - 2 Glory for each alien artifact found by the crew.">artifacts</label><br></td>
                                     <td><input type="radio" name="glory_path" value="astronomer">
-                                        <label for="glory_path">astronomer</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Thalasso
+difficulty: 3
+plush: astro
+flavor: You have devoted your life to discovering and exploring new worlds, and now you must do so to ensure the survival of humanity!
+desc: - 2 Glory for every planet you discover.
+- 1 Glory for entering orbit of a new planet.">astronomer</label><br></td>
                                 </tr>
                                 <tr>
                                     <td><input type="radio" name="glory_path" value="botanist">
-                                        <label for="glory_path">botanist</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Nano-Ladybugs
+difficulty: 2
+plush: plant
+flavor: They might be concerned with the fauna, but your dream is to grow your own exotic garden full of alien fruit!
+desc: - 3 Glory for each Alien Fruit you plant.">botanist</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="capricious">
-                                        <label for="glory_path">capricious</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Hyperthermal Rounds
+difficulty: 3
+plush: tech
+flavor: You just want to have fun, and you want to do it your way. When you get a capricious urge, you need to act on it!
+desc: - 3 Glory for every successfully completed Capricious objective.">capricious</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="chef">
-                                        <label for="glory_path">chef</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: SNC Kitchen
+difficulty: 3
+plush: chef
+flavor: You want to put the 'art' back in 'culinary arts'! Too bad availability of quality ingredients is limited here.
+desc: - 2 Glory for each premium food you successfully cook. ">chef</label><br></td>
+
                                 </tr>
                                 <tr>
                                     <td><input type="radio" name="glory_path" value="commander">
-                                        <label for="glory_path">commander</label></td>
+                                        <label for="glory_path">
+                                        <span title="gold: ACTOPI Protocol
+difficulty: 4
+plush: social
+flavor: As first in line for the crew's leadership, you must direct the ship and its occupants towards a brighter future!
+desc: - 3 Glory for every planet the Daedalus reaches.
+- 8 Glory for leading the crew to Eden. ">commander</label><br></td>
+
+
                                     <td><input type="radio" name="glory_path" value="conqueror">
-                                        <label for="glory_path">conqueror</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Targeting Assist
+difficulty: 3
+plush: force
+flavor: You've been given a golden opportunity to explore the stars and conquer many worlds. You will leave your mark on this universe.
+desc: - 4 Glory for every planet fully explored. ">conqueror</label><br></td>
+
+
                                     <td><input type="radio" name="glory_path" value="craftsman">
-                                        <label for="glory_path">craftsman</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Hyperthermal Rounds
+difficulty: 3
+plush: craft
+flavor: Surrounded by all this advanced technology, you must prove that there's nothing you can't understand the inner workings of. You'll be the one to build it all.
+desc: - 2 Glory for every blueprint you build or item you craft. ">craftsman</label><br></td>
+
                                 </tr>
                                 <tr>
                                     <td><input type="radio" name="glory_path" value="dangerous">
-                                        <label for="glory_path">dangerous</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Dynarcade
+difficulty: 3
+plush: chef
+flavor: You are a force to be reckoned with! You just need to prove your skills in hand-to-hand combat. And surely the crew will respect you with a title or two.
+desc: - 2 Glory for each Fight event you encounter on an expedition.
+- 4 Glory the first time you earn each Title. ">dangerous</label><br></td>
+
+
                                     <td><input type="radio" name="glory_path" value="defender">
-                                        <label for="glory_path">defender</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Dynarcade
+difficulty: 2
+plush: shoot
+flavor: Your mission is to protect the crew from invaders. If any hostile life-forms come aboard, you're the first one on call to dispatch them.
+desc: - 3 Glory for every hostile alien killed. ">defender</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="designer">
-                                        <label for="glory_path">designer</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Data Recovery
+difficulty: 2
+plush: neron
+flavor: You are intimately familiar with the design of this ship, and nothing would be more fulfilling than to see it reach its maximum potential.
+desc: - 2 Glory for every NERON project installed. ">designer</label><br></td>
+
                                 </tr>
                                 <tr>
                                     <td><input type="radio" name="glory_path" value="diplomat">
-                                        <label for="glory_path">diplomat</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Jukebox
+difficulty: 5
+plush: social
+flavor: Your goal is to reach out to and study new forms of alien life, even if said life is trying to kill you...
+desc: - 2 Glory for every encounter with alien life-forms. ">diplomat</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="drones">
-                                        <label for="glory_path">drones</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Sentry Turrets
+difficulty: 4
+plush: tech
+flavor: Your drones are the cutting edge of technology, but science is always striving to be even better. Your goal is to help your drones reach their peak!
+desc: - 4 Glory each time you upgrade a Drone. ">drones</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="explorer">
-                                        <label for="glory_path">explorer</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Targeting Assist
+difficulty: 4
+plush: astro
+flavor: You are the most eager to lead expeditions to new worlds, and reap the bounties (and glory) they provide.
+desc: - 3 Glory for each expedition you embark upon. ">explorer</label><br></td>
+
+
                                 </tr>
                                 <tr>
                                     <td><input type="radio" name="glory_path" value="fortunes">
-                                        <label for="glory_path">fortunes</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Nano-Ladybugs
+difficulty: 3
+plush: astro
+flavor: Not many people believe you can speak with the dead and draw wisdom from the stars. You will prove it by telling their fortunes and showing them the truth!
+desc: - 2 Glory each time you tell someone's fortune. Earn 3 instead if you successfully predict a positive or negative outcome. ">fortunes</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="generic">
-                                        <label for="glory_path">generic</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: SNC Kitchen
+difficulty: 1
+plush: it
+flavor: You're just happy to be here! Stay alive and don't do anything stupid!
+desc: - No extra glory earned from objectives. ">generic</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="healer">
-                                        <label for="glory_path">healer</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Thalasso
+difficulty: 2
+plush: heal
+flavor: Your life's goal is to spread kindness and goodwill to all good-hearted life-forms. You will restore their bodies, minds, and spirits.
+desc: - 2 Glory for every illness or injury you cure. ">healer</label><br></td>
+
                                 </tr>
                                 <tr>
                                     <td><input type="radio" name="glory_path" value="hunter">
-                                        <label for="glory_path">hunter</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Targeting Assist
+difficulty: 5
+plush: shoot
+flavor: Nothing gets the juices flowing better than sitting in the cockpit of a patroller and gunning down hostiles with your mad skills.
+desc: - 1 Glory for every 2 Hunters you kill. ">hunter</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="lover">
-                                        <label for="glory_path">lover</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Thalasso
+difficulty: 1
+plush: force
+flavor: Science, exploration, bah, none of that matters if you can't hook up with some hotties along the way. You'll win them over with your good looks and your charm or die trying!
+desc: - 2 Glory each time someone you have flirted with flirts back.
+- 2 Glory each time you Do The Thing. ">lover</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="moh">
-                                        <label for="glory_path">moh</label></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Hypersleep Pod
+difficulty: 3
+plush: heal
+flavor: You are the last hope for humanity! Your goal is to stay alive and help complete research that requires your presence.
+desc: - 1 Glory for every day you have survived.
+4 Glory for each research project that requires your presence. ">moh</label><br></td>
+
+
                                 </tr>
                                 <tr>
                                     <td><input type="radio" name="glory_path" value="mush_cure">
-                                        <label for="glory_path">mush_cure</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Underfloor Heating
+difficulty: 3
+plush: research
+flavor: Your life's work has been to find the cure to the Mush parasite. It can be reversed, they don't have to die!
+desc: - 5 Glory for completing Retro-Fungal Serum.
+- 5 Glory if a Mush agent is successfully cured. ">mush_cure</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="mush_hunter">
-                                        <label for="glory_path">mush_hunter</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Industrial Roaster
+difficulty: 1
+plush: force
+flavor: Those dirty mushrooms, on YOUR precious ship?! Inconceivable! You must eliminate them as quickly as possible!
+desc: - 3 Glory for every Mush agent killed. ">mush_hunter</label><br></td>
+
+
                                     <td><input type="radio" name="glory_path" value="mush_research">
-                                        <label for="glory_path">mush_research</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Noise Reducer
+difficulty: 4
+plush: research
+flavor: As one of the most brilliant minds aboard this ship, you must spearhead the research against the Mush and prevent them from taking over.
+desc: - 3 Glory for every anti-Mush research completed. ">mush_research</label><br></td>
+
                                 </tr>
                                 <tr>
                                     <td><input type="radio" name="glory_path" value="pilgred">
-                                        <label for="glory_path">pilgred</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Scrap Heap
+difficulty: 3
+plush: pilgred
+flavor: The PILGRED reactor is your baby, and you are the most qualified to repair it. All of this will be for nothing if you can't get out of deep space!
+desc: - 2 Glory for each 20% progress made on PILGRED repairs. ">pilgred</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="psychopath">
-                                        <label for="glory_path">psychopath</label></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Factory Stripes
+difficulty: 2
+plush: shoot
+flavor: You're a bit too eager to murder things, and that is your objective. Just try not to kill something others will miss.
+desc: - 2 Glory for every living thing you kill. ">psychopath</label><br></td>
+
+
                                     <td><input type="radio" name="glory_path" value="rebel">
-                                        <label for="glory_path">rebel</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Secret Compartments
+difficulty: 2
+plush: it
+flavor: You are not alone in your fight against the Mush! Your top priority is to contact the rebel bases and enlist the aid of their knowledge and resources.
+desc: - 2 Glory for each Rebel transmission decoded. ">rebel</label><br></td>
+
                                 </tr>
                                 <tr>
                                     <td><input type="radio" name="glory_path" value="shipshape">
-                                        <label for="glory_path">shipshape</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Holographic Blueprints
+difficulty: 4
+plush: tech
+flavor: You built this ship, and it's up to you to prove that your work is not a pile of space junk. What they don't know won't hurt them...
+desc: - 2 Glory for every 20 Hull Points repaired.
+- 1 Glory every cycle the ship spends above 90 hull (from day 2 onwards). ">shipshape</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="trader">
-                                        <label for="glory_path">trader</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Noise Reducer
+difficulty: 3
+plush: social
+flavor: You're a person of many talents, but nothing speaks to you more than the universal language of business. Your goal is to conduct trades with aliens!
+desc: - 4 Glory for each successful trade made with alien ships. ">trader</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="xeno_research">
-                                        <label for="glory_path">xeno_research</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: ACTOPI Protocol
+difficulty: 2
+plush: research
+flavor: There is no shortage of things to learn about alien races. Your objective is to study them and find every useful application of their biology.
+desc: - 2 Glory for every completed Xenobiologist research. ">xeno_research</label><br></td>
+
                                 </tr>
                                 <tr>
                                     <td><input type="radio" name="glory_path" value="xyloph">
-                                        <label for="glory_path">xyloph</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: SNC Kitchen
+difficulty: 2
+plush: social
+flavor: You are the head of communications aboard this ship, but your primary goal is to contact Xyloph and reunite with Kivanc Terzi.
+desc: - 8 Glory for contacting Kivanc Terzi through Xyloph. ">xyloph</label><br></td>
+
                                     <td><input type="radio" name="glory_path" value="xyloph2">
-                                        <label for="glory_path">xyloph2</label><br></td>
+                                        <label for="glory_path">
+                                        <span title="gold: Enhanced Security
+difficulty: 2
+plush: social
+flavor: You are the head of communications aboard this ship, but your primary goal is to contact Xyloph and reunite with Paola Rinaldo.
+desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</label><br></td>
+
                                 </tr>
                                 <td>
                             </table>
                         </td>   
                     </tr>
                     <tr>
-                        <td><label for="skills">skills: </label></td>
+                        <td><label for="skills">Skills: </label></td>
                         <td>Select up to 7 skills, up to 1 of which can be Limited.<table>
                                 <tr>
                                     <td>Common skills:</td>
@@ -555,23 +783,23 @@
                         </table></td>
                     </tr>
                     <tr>
-                        <td><label for="traits">traits: </label></td>
+                        <td><label for="traits">Traits: </label></td>
                         <td>Select up to 2 traits.<table>
                             <tr>
-                                <td><input type="checkbox" name="traits" value="hat" required>
+                                <td><input type="checkbox" name="traits" value="hat">
                                     <label for="traits">Adventurer's Hat</label></td>
-                                <td><input type="checkbox" name="traits" value="Agoraphobia">
+                                <td><input type="checkbox" name="traits" value="agoraphobia">
                                     <label for="traits">Agoraphobia</label></td>
                                 <td><input type="checkbox" name="traits" value="Ailurophobia">
                                     <label for="traits">Ailurophobia</label></td>
                                 
                             </tr>
                             <tr>
-                                <td><input type="checkbox" name="traits" value="Asocial">
+                                <td><input type="checkbox" name="traits" value="asocial">
                                     <label for="traits">Asocial</label></td>
                                 <td><input type="checkbox" name="traits" value="bionicarm">
                                     <label for="traits">Bionic Arm</label></td>
-                                <td><input type="checkbox" name="traits" value="Capricious">
+                                <td><input type="checkbox" name="traits" value="capricious">
                                     <label for="traits">Capricious</label></td>
                             </tr>
                             <tr>
@@ -583,39 +811,39 @@
                                     <label for="traits">Chronic Vertigo</label></td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" name="traits" value="Depression">
+                                <td><input type="checkbox" name="traits" value="depression">
                                     <label for="traits">Depression</label></td>
-                                <td><input type="checkbox" name="traits" value="Disabled">
+                                <td><input type="checkbox" name="traits" value="disabled">
                                     <label for="traits">Disabled</label></td>
                                 <td><input type="checkbox" name="traits" value="firsttime">
                                     <label for="traits">First Timer</label></td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" name="traits" value="Germaphobe">
+                                <td><input type="checkbox" name="traits" value="germaphobe">
                                     <label for="traits">Germaphobe</label></td>
-                                <td><input type="checkbox" name="traits" value="Globophobia">
+                                <td><input type="checkbox" name="traits" value="globophobia">
                                     <label for="traits">Globophobia</label></td>
                                 <td><input type="checkbox" name="traits" value="hyper">
                                     <label for="traits">Hyperactive</label></td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" name="traits" value="Illiterate">
+                                <td><input type="checkbox" name="traits" value="illiterate">
                                     <label for="traits">Illiterate</label></td>
-                                <td><input type="checkbox" name="traits" value="Immunized">
+                                <td><input type="checkbox" name="traits" value="immunized">
                                     <label for="traits">Immunized</label></td>
-                                <td><input type="checkbox" name="traits" value="Minor">
+                                <td><input type="checkbox" name="traits" value="minor">
                                     <label for="traits">Minor</label></td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" name="traits" value="Pacifist">
+                                <td><input type="checkbox" name="traits" value="pacifist">
                                     <label for="traits">Pacifist</label></td>  
-                                <td><input type="checkbox" name="traits" value="Paranoia">
+                                <td><input type="checkbox" name="traits" value="paranoia">
                                     <label for="traits">Paranoia</label></td>
                                 <td><input type="checkbox" name="traits" value="sixthsense">
                                     <label for="traits">Sixth Sense</label></td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" name="traits" value="Telepath">
+                                <td><input type="checkbox" name="traits" value="telepath">
                                     <label for="traits">Telepath</label></td>
                                 <td><input type="checkbox" name="traits" value="Weapon Phobia">
                                     <label for="traits">Weapon Phobia</label></td>
@@ -626,65 +854,93 @@
                     
                 
                 </table>
-                <input type="submit">
+                <input type="submit" label="Submit">
                 <br>
                 <textarea id="Output" rows="18" cols="100"></textarea>
                 <br>
                 Instructions for importing this loadout: <br>
-                1.  Copy the output. Select inside the text box, then hit CTRL+A followed by CTRL+C.<br>
+                1.  Copy the output: select inside the text box, then hit CTRL+A followed by CTRL+C.<br>
                 2.  Paste the output into Blahshroom's DMs.<br>
-                3.  Convert the output into a text file. Press the + button next to the message, then do "Upload your message as a file". <br>
+                3.  Press the + button next to the message, then hit "upload your message as a file". <br>
                 4.  Add the command "loadout import", hit Enter, and hope that it works.<br>
             </form> 
         </p>
         <script>
             
-            const urlParams = new URLSearchParams(window.location.search);
+
+            function convertColor(hexa){
+                var chunks = [];
+                var tmp,i;
+                hexa = hexa.substr(1); // remove the pound
+                if ( hexa.length === 3){
+                    tmp = hexa.split("");
+                    for(i=0;i<3;i++){
+                        chunks.push(parseInt(tmp[i]+""+tmp[i],16));
+                    }
+                }else if (hexa.length === 6){
+                    tmp = hexa.match(/.{2}/g);
+                    for(i=0;i<3;i++){
+                        chunks.push(parseInt(tmp[i],16));
+                    }
+                }else {
+                    throw new Error("'"+hexa+"' is not a valid hex format");
+                }
+
+                return chunks;
+            }
+
 
             function sanitize(input) {
                 if (input == null) {
                     return null
                 }
-                return input.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;").replace(/\//g, "&#x2F;").replaceAll('\r\n', '\\r\\n').replaceAll('\n', '\\n').replaceAll('\r', '\\r');
+                return input.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;").replace(/\//g, "&#x2F;").replace(/\n/g, "\\n");
             }
-            const name = sanitize(urlParams.get('name'));
-            const name_full = sanitize(urlParams.get('name_full'));
-            const race = sanitize(urlParams.get('race'));
-            const emoji = sanitize(urlParams.get('emoji'));
-            const color = sanitize(urlParams.get('color'));
-            const image_url = sanitize(urlParams.get('image_url'));
-            const desc = sanitize(urlParams.get('desc'));
-            const bio = sanitize(urlParams.get('bio'));
-            const gender = sanitize(urlParams.get('gender'));
-            const pronouns = sanitize(urlParams.get('pronouns'));
-            const commander_priority = sanitize(urlParams.get('commander_priority'));
-            const comms_priority = sanitize(urlParams.get('comms_priority'));
-            const neron_priority = sanitize(urlParams.get('neron_priority'));
-            const glory_path = sanitize(urlParams.get('glory_path'));
 
-            const skills = sanitize(urlParams.getAll('skills').join('","'));
-            const traits = sanitize(urlParams.getAll('traits').join('","'));
+            function makeLoadout() {
 
-            const output = `{
-            "name":"${name}",
-            "name_full":"${name_full}",
-            "race":"${race}",
-            "emoji":"👤",
-            "color":"${color}",
-            "image_url":"${image_url}",
-            "desc":"${desc}",
-            "bio":"${bio}",
-            "gender":"${gender}",
-            "pronouns":"${pronouns}",
-            "commander_priority":${commander_priority},
-            "comms_priority":${comms_priority},
-            "neron_priority":${neron_priority},
-            "glory_path":"${glory_path}",
-            "skills":["${skills}"],
-            "traits":["${traits}"]
+                var formData = new FormData(document.querySelector('form'));
+
+                const name = sanitize(formData.get('name'));
+                const name_full = sanitize(formData.get('name_full'));
+                const race = sanitize(formData.get('race'));
+                const emoji = sanitize(formData.get('emoji'));
+                const color = sanitize(formData.get('color'));
+                const image_url = sanitize(formData.get('image_url'));
+                const desc = sanitize(formData.get('desc'));
+                const bio = sanitize(formData.get('bio'));
+                const gender = sanitize(formData.get('gender'));
+                const pronouns = sanitize(formData.get('pronouns'));
+                const commander_priority = sanitize(formData.get('commander_priority'));
+                const comms_priority = sanitize(formData.get('comms_priority'));
+                const neron_priority = sanitize(formData.get('neron_priority'));
+                const glory_path = sanitize(formData.get('glory_path'));
+
+                const skills = sanitize(formData.getAll('skills').join('","'));
+                const traits = sanitize(formData.getAll('traits').join('","'));
+
+                const output = `{
+    "name":"${name}",
+    "name_full":"${name_full}",
+    "race":"${race}",
+    "emoji":"👤",
+    "color":[${convertColor(color)}],
+    "image_url":"${image_url}",
+    "desc":"${desc}",
+    "bio":"${bio}",
+    "gender":"${gender}",
+    "pronouns":"${pronouns}",
+    "commander_priority":${commander_priority},
+    "comms_priority":${comms_priority},
+    "neron_priority":${neron_priority},
+    "glory_path":"${glory_path}",
+    "skills":["${skills}"],
+    "traits":["${traits}"]
 }`
 
-            document.getElementById("Output").innerHTML = output;
+                document.getElementById("Output").innerHTML = output;
+
+            }
 
         </script>
     </body>
