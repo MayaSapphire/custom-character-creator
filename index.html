@@ -1,6 +1,7 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
     <title>
         Custom Character Creator
     </title>
@@ -18,85 +19,83 @@
             <table>
                 <tr>
                     <td><label for="name">Name: </label></td>
-                    <td><input type="text" name="name" placeholder="Name of the character" required></td>
+                    <td><input type="text" name="name" id="name" placeholder="Name of the character" required></td>
                 </tr>
 
                 <tr>
                     <td><label for="name_full">Full name: </label></td>
-                    <td><input type="text" name="name_full" placeholder="Full name of the character" required></td>
+                    <td><input type="text" name="name_full" id="name_full" placeholder="Full name of the character" required></td>
                 </tr>
                 
                 <tr>
                     <td><label for="race">Race: </label></td>
-                    <td><input type="text" name="race" placeholder="Race of the character" required value="Human"></td>
+                    <td><input type="text" name="race" id="race" placeholder="Race of the character" required value="Human"></td>
                 </tr>
 
                 <tr>
                     <td><label for="emoji">Emoji: </label></td>
-                    <td><input type="text" name="emoji" placeholder="Emoji for the character" required value="👤"></td>
+                    <td><input type="text" name="emoji" id="emoji" placeholder="Emoji for the character" required value="👤"></td>
                 </tr>
 
                 <tr>
                     <td><label for="color">Color: </label></td>
-                    <td><input type="color" name="color" required></td>
+                    <td><input type="color" name="color" id="color"></td>
                 </tr>
 
                 <tr>
                     <td><label for="image_url">Image URL: </label></td>
-                    <td><input type="text" name="image_url" placeholder="Link to the image" required value="None"></td>
+                    <td><input type="text" name="image_url" id="image_url" placeholder="Link to the image" required value="None"></td>
                 </tr>
 
                 <tr>
                     <td><label for="desc">Description: </label></td>
-                    <td><input type="text" name="desc" placeholder="Short description of the character"></td>
+                    <td><input type="text" name="desc" id="desc" placeholder="Short description of the character"></td>
                 </tr>
 
                 <tr>
                     <td><label for="bio">Bio: </label></td>
-                    <td><textarea name="bio" placeholder="Bio of the character" rows="3" cols = "50"></textarea></td>
+                    <td><textarea name="bio" id="bio" placeholder="Bio of the character" rows="3" cols = "50"></textarea></td>
                 </tr>
 
                 <tr>
                     <td><label for="gender">Gender: </label></td>
                     <td>
-                        <input type="radio" name="gender" value="female">
-                        <label for="gender">Female </label>
-                        <input type="radio" name="gender" value="male">
-                        <label for="gender">Male </label>
-                        <input type="radio" name="gender" value="other">
-                        <label for="gender">Other </label>
-                        <input type="radio" name="gender" value="none">
-                        <label for="gender">None </label>
+                        <input type="radio" name="gender" id="gender_female" value="female">
+                        <label for="gender_female">Female </label>
+                        <input type="radio" name="gender" id="gender_male" value="male">
+                        <label for="gender_male">Male </label>
+                        <input type="radio" name="gender" id="gender_other" value="other">
+                        <label for="gender_other">Other </label>
+                        <input type="radio" name="gender" id="gender_none" value="none">
+                        <label for="gender_none">None </label>
                     </td>
                 </tr>
                 
                 <tr>
                     <td><label for="pronouns">Pronouns: </label></td>
                     <td>
-                        <input type="radio" name="pronouns" value="she/her">
-                        <label for="pronouns">she/her</label>
-                        <input type="radio" name="pronouns" value="he/him">
-                        <label for="pronouns">he/him</label>
-                        <input type="radio" name="pronouns" value="they/them">
-                        <label for="pronouns">they/them</label>
-                        <input type="radio" name="pronouns" value="it/it/its/itself">
-                        <label for="pronouns">it/its</label>
+                        <input type="radio" name="pronouns" id="pronouns_she/her" value="she/her">
+                        <label for="pronouns_she/her">she/her</label>
+                        <input type="radio" name="pronouns" id="pronouns_he/him" value="he/him">
+                        <label for="pronouns_he/him">he/him</label>
+                        <input type="radio" name="pronouns" id="pronouns they/them" value="they/them">
+                        <label for="pronouns they/them">they/them</label>
+                        <input type="radio" name="pronouns" id="pronouns_it/it/its/itself" value="it/it/its/itself">
+                        <label for="pronouns_it/it/its/itself">it/its</label>
                     </td>
                 </tr>
 
                 <tr>
-                    <td><label for="gender">Commander priority: </label></td>
-                    <td><input type="number" name="commander_priority" min="1" max="100" required></td>
-                </tr>
-
-                <tr>
-                    <td><label for="comms_priority">Comms officer priority: </label></td>
-                    <td><input type="number" name="comms_priority" min="1" max="100" required></td>
-                </tr>
-
-                <tr>
-                    <td><label for="neron_priority">NERON administrator priority: </label></td>
-                    <td><input type="number" name="neron_priority" min="1" max="100" required></td>
+                    <td>Priorities: </td>
+                        
+                    <td>
+                        <label for="commander_priority">Commander: </label>
+                        <input type="number" name="commander_priority" id="commander_priority" min="1" max="100" required>
+                        <label for="comms_priority">Comms officer: </label>
+                        <input type="number" name="comms_priority" id="comms_priority" min="1" max="100" required>
+                        <label for="neron_priority">NERON admin: </label>
+                        <input type="number" name="neron_priority" id="neron_priority" min="1" max="100" required>
+                    </td>
                 </tr>
 
                 <tr>
@@ -104,8 +103,8 @@
                     <td>
                         <table>
                             <tr>
-                                <td><input type="radio" name="glory_path" value="anomalies">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_anomalies" value="anomalies">
+                                    <label for="glory_path_anomalies">
                                             <span
                                             title="gold: Nano-Ladybugs
 difficulty: 2
@@ -114,289 +113,386 @@ flavor: Space is full of wonders and secrets hiding among the stars, just waitin
 desc: - 2 Glory for every spatial anomaly you discover.
 - 4 Glory for every anomaly the Daedalus visits.">
                                             anomalies</span>
-                                    </label><br></td>
-                                <td><input type="radio" name="glory_path" value="artifacts">
-                                    <label for="glory_path">
+                                    </label>
+                                    <br>
+                                </td>
+                                <td>
+                                    <input type="radio" name="glory_path" id="glory_path_artifacts" value="artifacts">
+                                    <label for="glory_path_artifacts">
                                     <span title="gold: SNC Kitchen
 difficulty: 4
 plush: shoot
 flavor: As an intergalactic explorer, your dream is to amass a vast hoard of alien artifacts... and keep them to yourself, obviously!
-desc: - 2 Glory for each alien artifact found by the crew.">artifacts</label><br></td>
-                                <td><input type="radio" name="glory_path" value="astronomer">
-                                    <label for="glory_path">
+desc: - 2 Glory for each alien artifact found by the crew.">artifacts</span>
+                                    </label>
+                                    <br>
+                                </td>
+                                <td>
+                                    <input type="radio" name="glory_path" id="glory_path_astronomer" value="astronomer">
+                                    <label for="glory_path_astronomer">
                                     <span title="gold: Thalasso
 difficulty: 3
 plush: astro
 flavor: You have devoted your life to discovering and exploring new worlds, and now you must do so to ensure the survival of humanity!
 desc: - 2 Glory for every planet you discover.
-- 1 Glory for entering orbit of a new planet.">astronomer</label><br></td>
+- 1 Glory for entering orbit of a new planet.">astronomer</span>
+                                    </label>
+                                    <br>
+                                </td>
                             </tr>
                             <tr>
-                                <td><input type="radio" name="glory_path" value="botanist">
-                                    <label for="glory_path">
+                                <td>
+                                    <input type="radio" name="glory_path" id="glory_path_botanist" value="botanist">
+                                        <label for="glory_path_botanist">
                                     <span title="gold: Nano-Ladybugs
 difficulty: 2
 plush: plant
 flavor: They might be concerned with the fauna, but your dream is to grow your own exotic garden full of alien fruit!
-desc: - 3 Glory for each Alien Fruit you plant.">botanist</label><br></td>
+desc: - 3 Glory for each Alien Fruit you plant.">botanist</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="capricious">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_capricious" value="capricious">
+                                    <label for="glory_path_capricious">
                                     <span title="gold: Hyperthermal Rounds
 difficulty: 3
 plush: tech
 flavor: You just want to have fun, and you want to do it your way. When you get a capricious urge, you need to act on it!
-desc: - 3 Glory for every successfully completed Capricious objective.">capricious</label><br></td>
+desc: - 3 Glory for every successfully completed Capricious objective.">capricious</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="chef">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_chef" value="chef">
+                                    <label for="glory_path_chef">
                                     <span title="gold: SNC Kitchen
 difficulty: 3
 plush: chef
 flavor: You want to put the 'art' back in 'culinary arts'! Too bad availability of quality ingredients is limited here.
-desc: - 2 Glory for each premium food you successfully cook. ">chef</label><br></td>
+desc: - 2 Glory for each premium food you successfully cook. ">chef</span>
+                                    </label>
+                                    <br>
+                                </td>
 
                             </tr>
                             <tr>
-                                <td><input type="radio" name="glory_path" value="commander">
-                                    <label for="glory_path">
+                                <td>
+                                    <input type="radio" name="glory_path" id="glory_path_commander" value="commander">
+                                    <label for="glory_path_commander">
                                     <span title="gold: ACTOPI Protocol
 difficulty: 4
 plush: social
 flavor: As first in line for the crew's leadership, you must direct the ship and its occupants towards a brighter future!
 desc: - 3 Glory for every planet the Daedalus reaches.
-- 8 Glory for leading the crew to Eden. ">commander</label><br></td>
+- 8 Glory for leading the crew to Eden. ">commander</span>
+                                    </label>
+                                    <br>
+                                </td>
 
 
-                                <td><input type="radio" name="glory_path" value="conqueror">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_conqueror" value="conqueror">
+                                    <label for="glory_path_conqueror">
                                     <span title="gold: Targeting Assist
 difficulty: 3
 plush: force
 flavor: You've been given a golden opportunity to explore the stars and conquer many worlds. You will leave your mark on this universe.
-desc: - 4 Glory for every planet fully explored. ">conqueror</label><br></td>
+desc: - 4 Glory for every planet fully explored. ">conqueror</span>
+                                    </label>
+                                    <br>
+                                </td>
 
 
-                                <td><input type="radio" name="glory_path" value="craftsman">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_craftsman" value="craftsman">
+                                    <label for="glory_path_craftsman">
                                     <span title="gold: Hyperthermal Rounds
 difficulty: 3
 plush: craft
 flavor: Surrounded by all this advanced technology, you must prove that there's nothing you can't understand the inner workings of. You'll be the one to build it all.
-desc: - 2 Glory for every blueprint you build or item you craft. ">craftsman</label><br></td>
+desc: - 2 Glory for every blueprint you build or item you craft. ">craftsman</span>
+                                    </label>
+                                    <br>
+                                </td>
 
                             </tr>
                             <tr>
-                                <td><input type="radio" name="glory_path" value="dangerous">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_dangerous" value="dangerous">
+                                    <label for="glory_path_dangerous">
                                     <span title="gold: Dynarcade
 difficulty: 3
 plush: chef
 flavor: You are a force to be reckoned with! You just need to prove your skills in hand-to-hand combat. And surely the crew will respect you with a title or two.
 desc: - 2 Glory for each Fight event you encounter on an expedition.
-- 4 Glory the first time you earn each Title. ">dangerous</label><br></td>
+- 4 Glory the first time you earn each Title. ">dangerous</span>
+                                    </label>
+                                    <br>
+                                </td>
 
 
-                                <td><input type="radio" name="glory_path" value="defender">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_defender" value="defender">
+                                    <label for="glory_path_defender">
                                     <span title="gold: Dynarcade
 difficulty: 2
 plush: shoot
 flavor: Your mission is to protect the crew from invaders. If any hostile life-forms come aboard, you're the first one on call to dispatch them.
-desc: - 3 Glory for every hostile alien killed. ">defender</label><br></td>
+desc: - 3 Glory for every hostile alien killed. ">defender</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="designer">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_designer" value="designer">
+                                    <label for="glory_path_designer">
                                     <span title="gold: Data Recovery
 difficulty: 2
 plush: neron
 flavor: You are intimately familiar with the design of this ship, and nothing would be more fulfilling than to see it reach its maximum potential.
-desc: - 2 Glory for every NERON project installed. ">designer</label><br></td>
+desc: - 2 Glory for every NERON project installed. ">designer</span>
+                                    </label>
+                                    <br>
+                                </td>
 
                             </tr>
                             <tr>
-                                <td><input type="radio" name="glory_path" value="diplomat">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_diplomat" value="diplomat">
+                                    <label for="glory_path_diplomat">
                                     <span title="gold: Jukebox
 difficulty: 5
 plush: social
 flavor: Your goal is to reach out to and study new forms of alien life, even if said life is trying to kill you...
-desc: - 2 Glory for every encounter with alien life-forms. ">diplomat</label><br></td>
+desc: - 2 Glory for every encounter with alien life-forms. ">diplomat</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="drones">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_drones" value="drones">
+                                    <label for="glory_path_drones">
                                     <span title="gold: Sentry Turrets
 difficulty: 4
 plush: tech
 flavor: Your drones are the cutting edge of technology, but science is always striving to be even better. Your goal is to help your drones reach their peak!
-desc: - 4 Glory each time you upgrade a Drone. ">drones</label><br></td>
+desc: - 4 Glory each time you upgrade a Drone. ">drones</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="explorer">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_explorer" value="explorer">
+                                    <label for="glory_path_explorer">
                                     <span title="gold: Targeting Assist
 difficulty: 4
 plush: astro
 flavor: You are the most eager to lead expeditions to new worlds, and reap the bounties (and glory) they provide.
-desc: - 3 Glory for each expedition you embark upon. ">explorer</label><br></td>
+desc: - 3 Glory for each expedition you embark upon. ">explorer</span>
+                                    </label>
+                                    <br>
+                                </td>
 
 
                             </tr>
                             <tr>
-                                <td><input type="radio" name="glory_path" value="fortunes">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_fortunes" value="fortunes">
+                                    <label for="glory_path_fortunes">
                                     <span title="gold: Nano-Ladybugs
 difficulty: 3
 plush: astro
 flavor: Not many people believe you can speak with the dead and draw wisdom from the stars. You will prove it by telling their fortunes and showing them the truth!
-desc: - 2 Glory each time you tell someone's fortune. Earn 3 instead if you successfully predict a positive or negative outcome. ">fortunes</label><br></td>
+desc: - 2 Glory each time you tell someone's fortune. Earn 3 instead if you successfully predict a positive or negative outcome. ">fortunes</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="generic">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_generic" value="generic">
+                                    <label for="glory_path_generic">
                                     <span title="gold: SNC Kitchen
 difficulty: 1
 plush: it
 flavor: You're just happy to be here! Stay alive and don't do anything stupid!
-desc: - No extra glory earned from objectives. ">generic</label><br></td>
+desc: - No extra glory earned from objectives. ">generic</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="healer">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_healer" value="healer">
+                                    <label for="glory_path_healer">
                                     <span title="gold: Thalasso
 difficulty: 2
 plush: heal
 flavor: Your life's goal is to spread kindness and goodwill to all good-hearted life-forms. You will restore their bodies, minds, and spirits.
-desc: - 2 Glory for every illness or injury you cure. ">healer</label><br></td>
+desc: - 2 Glory for every illness or injury you cure. ">healer</span>
+                                    </label>
+                                    <br>
+                                </td>
 
                             </tr>
                             <tr>
-                                <td><input type="radio" name="glory_path" value="hunter">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_hunter" value="hunter">
+                                    <label for="glory_path_hunter">
                                     <span title="gold: Targeting Assist
 difficulty: 5
 plush: shoot
 flavor: Nothing gets the juices flowing better than sitting in the cockpit of a patroller and gunning down hostiles with your mad skills.
-desc: - 1 Glory for every 2 Hunters you kill. ">hunter</label><br></td>
+desc: - 1 Glory for every 2 Hunters you kill. ">hunter</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="lover">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_lover" value="lover">
+                                    <label for="glory_path_lover">
                                     <span title="gold: Thalasso
 difficulty: 1
 plush: force
 flavor: Science, exploration, bah, none of that matters if you can't hook up with some hotties along the way. You'll win them over with your good looks and your charm or die trying!
 desc: - 2 Glory each time someone you have flirted with flirts back.
-- 2 Glory each time you Do The Thing. ">lover</label><br></td>
+- 2 Glory each time you Do The Thing. ">lover</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="moh">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_moh" value="moh">
+                                    <label for="glory_path_moh">
                                     <span title="gold: Hypersleep Pod
 difficulty: 3
 plush: heal
 flavor: You are the last hope for humanity! Your goal is to stay alive and help complete research that requires your presence.
 desc: - 1 Glory for every day you have survived.
-4 Glory for each research project that requires your presence. ">moh</label><br></td>
+4 Glory for each research project that requires your presence. ">moh</span>
+                                    </label>
+                                    <br>
+                                </td>
 
 
                             </tr>
                             <tr>
-                                <td><input type="radio" name="glory_path" value="mush_cure">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_mush_cure" value="mush_cure">
+                                    <label for="glory_path_mush_cure">
                                     <span title="gold: Underfloor Heating
 difficulty: 3
 plush: research
 flavor: Your life's work has been to find the cure to the Mush parasite. It can be reversed, they don't have to die!
 desc: - 5 Glory for completing Retro-Fungal Serum.
-- 5 Glory if a Mush agent is successfully cured. ">mush_cure</label><br></td>
+- 5 Glory if a Mush agent is successfully cured. ">mush_cure</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="mush_hunter">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_mush_hunter" value="mush_hunter">
+                                    <label for="glory_path_mush_hunter">
                                     <span title="gold: Industrial Roaster
 difficulty: 1
 plush: force
 flavor: Those dirty mushrooms, on YOUR precious ship?! Inconceivable! You must eliminate them as quickly as possible!
-desc: - 3 Glory for every Mush agent killed. ">mush_hunter</label><br></td>
+desc: - 3 Glory for every Mush agent killed. ">mush_hunter</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-
-                                <td><input type="radio" name="glory_path" value="mush_research">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_mush_research" value="mush_research">
+                                    <label for="glory_path_mush_research">
                                     <span title="gold: Noise Reducer
 difficulty: 4
 plush: research
 flavor: As one of the most brilliant minds aboard this ship, you must spearhead the research against the Mush and prevent them from taking over.
-desc: - 3 Glory for every anti-Mush research completed. ">mush_research</label><br></td>
+desc: - 3 Glory for every anti-Mush research completed. ">mush_research</span>
+                                    </label>
+                                    <br>
+                                </td>
 
                             </tr>
                             <tr>
-                                <td><input type="radio" name="glory_path" value="pilgred">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_pilgred" value="pilgred">
+                                    <label for="glory_path_pilgred">
                                     <span title="gold: Scrap Heap
 difficulty: 3
 plush: pilgred
 flavor: The PILGRED reactor is your baby, and you are the most qualified to repair it. All of this will be for nothing if you can't get out of deep space!
-desc: - 2 Glory for each 20% progress made on PILGRED repairs. ">pilgred</label><br></td>
+desc: - 2 Glory for each 20% progress made on PILGRED repairs. ">pilgred</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="psychopath">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_psychopath" value="psychopath">
+                                    <label for="glory_path_psychopath">
                                     <span title="gold: Factory Stripes
 difficulty: 2
 plush: shoot
 flavor: You're a bit too eager to murder things, and that is your objective. Just try not to kill something others will miss.
-desc: - 2 Glory for every living thing you kill. ">psychopath</label><br></td>
+desc: - 2 Glory for every living thing you kill. ">psychopath</span>
+                                    </label>
+                                    <br>
+                                </td>
 
 
-                                <td><input type="radio" name="glory_path" value="rebel">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_rebel" value="rebel">
+                                    <label for="glory_path_rebel">
                                     <span title="gold: Secret Compartments
 difficulty: 2
 plush: it
 flavor: You are not alone in your fight against the Mush! Your top priority is to contact the rebel bases and enlist the aid of their knowledge and resources.
-desc: - 2 Glory for each Rebel transmission decoded. ">rebel</label><br></td>
+desc: - 2 Glory for each Rebel transmission decoded. ">rebel</span>
+                                    </label>
+                                    <br>
+                                </td>
 
                             </tr>
                             <tr>
-                                <td><input type="radio" name="glory_path" value="shipshape">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_shipshape" value="shipshape">
+                                    <label for="glory_path_shipshape">
                                     <span title="gold: Holographic Blueprints
 difficulty: 4
 plush: tech
 flavor: You built this ship, and it's up to you to prove that your work is not a pile of space junk. What they don't know won't hurt them...
 desc: - 2 Glory for every 20 Hull Points repaired.
-- 1 Glory every cycle the ship spends above 90 hull (from day 2 onwards). ">shipshape</label><br></td>
+- 1 Glory every cycle the ship spends above 90 hull (from day 2 onwards). ">shipshape</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="trader">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_trader" value="trader">
+                                    <label for="glory_path_trader">
                                     <span title="gold: Noise Reducer
 difficulty: 3
 plush: social
 flavor: You're a person of many talents, but nothing speaks to you more than the universal language of business. Your goal is to conduct trades with aliens!
-desc: - 4 Glory for each successful trade made with alien ships. ">trader</label><br></td>
+desc: - 4 Glory for each successful trade made with alien ships. ">trader</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="xeno_research">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_xeno_research" value="xeno_research">
+                                    <label for="glory_path_xeno_research">
                                     <span title="gold: ACTOPI Protocol
 difficulty: 2
 plush: research
 flavor: There is no shortage of things to learn about alien races. Your objective is to study them and find every useful application of their biology.
-desc: - 2 Glory for every completed Xenobiologist research. ">xeno_research</label><br></td>
+desc: - 2 Glory for every completed Xenobiologist research. ">xeno_research</span>
+                                    </label>
+                                    <br>
+                                </td>
 
                             </tr>
                             <tr>
-                                <td><input type="radio" name="glory_path" value="xyloph">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_xyloph" value="xyloph">
+                                    <label for="glory_path_xyloph">
                                     <span title="gold: SNC Kitchen
 difficulty: 2
 plush: social
 flavor: You are the head of communications aboard this ship, but your primary goal is to contact Xyloph and reunite with Kivanc Terzi.
-desc: - 8 Glory for contacting Kivanc Terzi through Xyloph. ">xyloph</label><br></td>
+desc: - 8 Glory for contacting Kivanc Terzi through Xyloph. ">xyloph</span>
+                                    </label>
+                                    <br>
+                                </td>
 
-                                <td><input type="radio" name="glory_path" value="xyloph2">
-                                    <label for="glory_path">
+                                <td><input type="radio" name="glory_path" id="glory_path_xyloph2" value="xyloph2">
+                                    <label for="glory_path_xyloph2">
                                     <span title="gold: Enhanced Security
 difficulty: 2
 plush: social
 flavor: You are the head of communications aboard this ship, but your primary goal is to contact Xyloph and reunite with Paola Rinaldo.
-desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</label><br></td>
-
+desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</span>
+                                    </label>
+                                    <br>
+                                </td>
+                                
                             </tr>
-                            <td>
                         </table>
                     </td>   
                 </tr>
@@ -404,356 +500,352 @@ desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</label><b
                     <td><label for="skills">Skills: </label></td>
                     <td>Select up to 7 skills, up to 1 of which can be Limited.<table>
                             <tr>
-                                <td>Common skills:</td>
-                                <td><input type="checkbox" name="skills" value="Astrophysicist">
-                                    <label for="skills">Astrophysicist</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_analytical" value="Analytical">
+                                    <label for="skills_analytical" class="unique-skill">Analytical</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Biologist">
-                                    <label for="skills">Biologist</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_antique_perfume" value="Antique Perfume">
+                                    <label for="skills_antique_perfume" class="unique-skill">Antique Perfume</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Botanist">
-                                    <label for="skills">Botanist</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_apprentice" value="Apprentice">
+                                    <label for="skills_apprentice" class="limited-skill">Apprentice</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Builder">
-                                    <label for="skills">Builder</label></td>
-                                </tr>
-                                <tr>    
-                                    <td><input type="checkbox" name="skills" value="Charismatic">
-                                    <label for="skills">Charismatic</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Chef">
-                                    <label for="skills">Chef</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Chemist">
-                                    <label for="skills">Chemist</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Cosmologist">
-                                    <label for="skills">Cosmologist</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Creative">
-                                    <label for="skills">Creative</label></td>
-                                </tr>
-                                <tr>    
-                                    <td><input type="checkbox" name="skills" value="Designer">
-                                    <label for="skills">Designer</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Demolitions Expert">
-                                    <label for="skills">Demolitions Expert</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Determined">
-                                    <label for="skills">Determined</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Diplomat">
-                                    <label for="skills">Diplomat</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Engineer">
-                                    <label for="skills">Engineer</label></td>
-                                </tr>
-                                <tr>    
-                                    <td><input type="checkbox" name="skills" value="Fencer">
-                                    <label for="skills">Fencer</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Firefighter">
-                                    <label for="skills">Firefighter</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Hauler">
-                                    <label for="skills">Hauler</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="IT Expert">
-                                    <label for="skills">IT Expert</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Jack Of All Trades">
-                                    <label for="skills">Jack Of All Trades</label></td>
-                                </tr>    
-                                <tr>
-                                    <td><input type="checkbox" name="skills" value="Leader">
-                                    <label for="skills">Leader</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Logistics Expert">
-                                    <label for="skills">Logistics Expert</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Lucky">
-                                    <label for="skills">Lucky</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Medic">
-                                    <label for="skills">Medic</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Nurse">
-                                    <label for="skills">Nurse</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_astrophysicist" value="Astrophysicist">
+                                    <label for="skills_astrophysicist" class="common-skill">Astrophysicist</label></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" name="skills" value="Pilot">
-                                    <label for="skills">Pilot</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_biologist" value="Biologist">
+                                    <label for="skills_biologist" class="common-skill">Biologist</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Radio Expert">
-                                    <label for="skills">Radio Expert</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_blacksmith" value="Blacksmith">
+                                    <label for="skills_blacksmith" class="exclusive-skill">Blacksmith</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Robotics Expert">
-                                    <label for="skills">Robotics Expert</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_blessing" value="Blessing">
+                                    <label for="skills_blessing" class="exclusive-skill">Blessing</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Scavenger">
-                                    <label for="skills">Scavenger</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Shooter">
-                                    <label for="skills">Shooter</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_blinker" value="Blinker">
+                                    <label for="skills_blinker" class="limited-skill">Blinker</label></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" name="skills" value="Solid">
-                                    <label for="skills">Solid</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_blitz" value="Blitz">
+                                    <label for="skills_blitz" class="unique-skill">Blitz</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Sprinter">
-                                    <label for="skills">Sprinter</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_botanist" value="Botanist">
+                                    <label for="skills_botanist" class="common-skill">Botanist</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Survivalist">
-                                    <label for="skills">Survivalist</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_brute_force" value="Brute Force">
+                                    <label for="skills_brute_force" class="exclusive-skill">Brute Force</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Tamer">
-                                    <label for="skills">Tamer</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Technician">
-                                    <label for="skills">Technician</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_builder" value="Builder">
+                                    <label for="skills_builder" class="common-skill">Builder</label></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" name="skills" value="Tinker">
-                                    <label for="skills">Tinker</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_caffeine_junkie" value="Caffeine Junkie">
+                                    <label for="skills_caffeine_junkie" class="unique-skill">Caffeine Junkie</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="The Optimist
+                                <td><input type="checkbox" name="skills" id="skills_carefree" value="Carefree">
+                                    <label for="skills_carefree" class="exclusive-skill">Carefree</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_carnivore" value="Carnivore">
+                                    <label for="skills_carnivore" class="exclusive-skill">Carnivore</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_charismatic" value="Charismatic">
+                                    <label for="skills_charismatic" class="common-skill">Charismatic</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_chef" value="Chef">
+                                    <label for="skills_chef" class="common-skill">Chef</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_chemist" value="Chemist">
+                                    <label for="skills_chemist" class="common-skill">Chemist</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_cold_blooded" value="Cold Blooded">
+                                    <label for="skills_cold_blooded" class="unique-skill">Cold Blooded</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_commandant" value="Commandant">
+                                    <label for="skills_commandant" class="exclusive-skill">Commandant</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_confidant" value="Confidant">
+                                    <label for="skills_confidant" class="unique-skill">Confidant</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_contortionist" value="Contortionist">
+                                    <label for="skills_contortionist" class="exclusive-skill">Contortionist</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_cosmologist" value="Cosmologist">
+                                    <label for="skills_cosmologist" class="common-skill">Cosmologist</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_crazy_eye" value="Crazy Eye">
+                                    <label for="skills_crazy_eye" class="unique-skill">Crazy Eye</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_creative" value="Creative">
+                                    <label for="skills_creative" class="common-skill">Creative</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_daredevil" value="Daredevil">
+                                    <label for="skills_daredevil" class="unique-skill">Daredevil</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_demolitions_expert" value="Demolitions Expert">
+                                    <label for="skills_demolitions_expert" class="common-skill">Demolitions Expert</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_designer" value="Designer">
+                                    <label for="skills_designer" class="common-skill">Designer</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_detached_crewmember" value="Detached Crewmember">
+                                    <label for="skills_detached_crewmember" class="unique-skill">Detached Crewmember</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_determined" value="Determined">
+                                    <label for="skills_determined" class="common-skill">Determined</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_devotion" value="Devotion">
+                                    <label for="skills_devotion" class="unique-skill">Devotion</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_diplomat" value="Diplomat">
+                                    <label for="skills_diplomat" class="common-skill">Diplomat</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_director" value="Director">
+                                    <label for="skills_director" class="unique-skill">Director</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_dragonscale" value="Dragonscale">
+                                    <label for="skills_dragonscale" class="exclusive-skill">Dragonscale</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_electrician" value="Electrician">
+                                    <label for="skills_electrician" class="unique-skill">Electrician</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_engineer" value="Engineer">
+                                    <label for="skills_engineer" class="common-skill">Engineer</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_expert" value="Expert">
+                                    <label for="skills_expert" class="unique-skill">Expert</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_fencer" value="Fencer">
+                                    <label for="skills_fencer" class="common-skill">Fencer</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_firefighter" value="Firefighter">
+                                    <label for="skills_firefighter" class="common-skill">Firefighter</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_fortune_teller" value="Fortune Teller">
+                                    <label for="skills_fortune_teller" class="unique-skill">Fortune Teller</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_frugivore" value="Frugivore">
+                                    <label for="skills_frugivore" class="unique-skill">Frugivore</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_genius" value="Genius">
+                                    <label for="skills_genius" class="unique-skill">Genius</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_green_thumb" value="Green Thumb">
+                                    <label for="skills_green_thumb" class="unique-skill">Green Thumb</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_gunner" value="Gunner">
+                                    <label for="skills_gunner" class="unique-skill">Gunner</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_hair_trigger" value="Hair Trigger">
+                                    <label for="skills_hair_trigger" class="unique-skill">Hair Trigger</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_hauler" value="Hauler">
+                                    <label for="skills_hauler" class="common-skill">Hauler</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_hygienist" value="Hygienist">
+                                    <label for="skills_hygienist" class="unique-skill">Hygienist</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_inspiration" value="Inspiration">
+                                    <label for="skills_inspiration" class="exclusive-skill">Inspiration</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_intimidating" value="Intimidating">
+                                    <label for="skills_intimidating" class="unique-skill">Intimidating</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_it_expert" value="IT Expert">
+                                    <label for="skills_it_expert" class="common-skill">IT Expert</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_jack_of_all_trades" value="Jack Of All Trades">
+                                    <label for="skills_jack_of_all_trades" class="common-skill">Jack Of All Trades</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_keen_eye" value="Keen Eye">
+                                    <label for="skills_keen_eye" class="unique-skill">Keen Eye</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_leader" value="Leader">
+                                    <label for="skills_leader" class="common-skill">Leader</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_lethargy" value="Lethargy">
+                                    <label for="skills_lethargy" class="limited-skill">Lethargy</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_logistics_expert" value="Logistics Expert">
+                                    <label for="skills_logistics_expert" class="common-skill">Logistics Expert</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_lucky" value="Lucky">
+                                    <label for="skills_lucky" class="common-skill">Lucky</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_mankind's_only Hope" value="Mankind's Only Hope">
+                                    <label for="skills_mankind's_only Hope" class="unique-skill">Mankind's Only Hope</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_medic" value="Medic">
+                                    <label for="skills_medic" class="common-skill">Medic</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_meds_junkie" value="Meds Junkie">
+                                    <label for="skills_meds_junkie" class="unique-skill">Meds Junkie</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_metalworker" value="Metalworker">
+                                    <label for="skills_metalworker" class="unique-skill">Metalworker</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_meticulous" value="Meticulous">
+                                    <label for="skills_meticulous" class="unique-skill">Meticulous</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_motivator" value="Motivator">
+                                    <label for="skills_motivator" class="unique-skill">Motivator</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_mycologist" value="Mycologist">
+                                    <label for="skills_mycologist" class="unique-skill">Mycologist</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_neron's_only_friend" value="NERON's Only Friend">
+                                    <label for="skills_neron's_only_friend" class="unique-skill">NERON's Only Friend</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_nurse" value="Nurse">
+                                    <label for="skills_nurse" class="common-skill">Nurse</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_observant" value="Observant">
+                                    <label for="skills_observant" class="unique-skill">Observant</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_opportunist" value="Opportunist">
+                                    <label for="skills_opportunist" class="unique-skill">Opportunist</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_panic" value="Panic">
+                                    <label for="skills_panic" class="unique-skill">Panic</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_paranoid" value="Paranoid">
+                                    <label for="skills_paranoid" class="limited-skill">Paranoid</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_perfect_vision" value="Perfect Vision">
+                                    <label for="skills_perfect_vision" class="exclusive-skill">Perfect Vision</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_physicist" value="Physicist">
+                                    <label for="skills_physicist" class="unique-skill">Physicist</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_pickpocket" value="Pickpocket">
+                                    <label for="skills_pickpocket" class="unique-skill">Pickpocket</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_pilot" value="Pilot">
+                                    <label for="skills_pilot" class="common-skill">Pilot</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_politician" value="Politician">
+                                    <label for="skills_politician" class="unique-skill">Politician</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_polymath" value="Polymath">
+                                    <label for="skills_polymath" class="unique-skill">Polymath</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_polyvalent" value="Polyvalent">
+                                    <label for="skills_polyvalent" class="unique-skill">Polyvalent</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_possession" value="Possession">
+                                    <label for="skills_possession" class="unique-skill">Possession</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_premonition" value="Premonition">
+                                    <label for="skills_premonition" class="unique-skill">Premonition</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_radio_expert" value="Radio Expert">
+                                    <label for="skills_radio_expert" class="common-skill">Radio Expert</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_rebel" value="Rebel">
+                                    <label for="skills_rebel" class="unique-skill">Rebel</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_robotics_expert" value="Robotics Expert">
+                                    <label for="skills_robotics_expert" class="common-skill">Robotics Expert</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_scavenger" value="Scavenger">
+                                    <label for="skills_scavenger" class="common-skill">Scavenger</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_self_sacrifice" value="Self-Sacrifice">
+                                    <label for="skills_self_sacrifice" class="unique-skill">Self-Sacrifice</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_shooter" value="Shooter">
+                                    <label for="skills_shooter" class="common-skill">Shooter</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_shrink" value="Shrink">
+                                    <label for="skills_shrink" class="unique-skill">Shrink</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_smelter" value="Smelter">
+                                    <label for="skills_smelter" class="exclusive-skill">Smelter</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_sneak" value="Sneak">
+                                    <label for="skills_sneak" class="unique-skill">Sneak</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_solid" value="Solid">
+                                    <label for="skills_solid" class="common-skill">Solid</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_sprinter" value="Sprinter">
+                                    <label for="skills_sprinter" class="common-skill">Sprinter</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_strateguru" value="Strateguru">
+                                    <label for="skills_strateguru" class="unique-skill">Strateguru</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_supervisor" value="Supervisor">
+                                    <label for="skills_supervisor" class="unique-skill">Supervisor</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_survivalist" value="Survivalist">
+                                    <label for="skills_survivalist" class="common-skill">Survivalist</label></td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" name="skills" id="skills_tamer" value="Tamer">
+                                    <label for="skills_tamer" class="common-skill">Tamer</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_technician" value="Technician">
+                                    <label for="skills_technician" class="common-skill">Technician</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_the_optimist" value="The Optimist
                                     ">
-                                    <label for="skills">The Optimist</label></td>
+                                    <label for="skills_the_optimist" class="common-skill">The Optimist</label></td>
+                                    
+                                <td><input type="checkbox" name="skills" id="skills_tinker" value="Tinker">
+                                    <label for="skills_tinker" class="common-skill">Tinker</label></td>
                                 </tr>
                                 <tr>
-                                    <td>Unique skills:</td>
-                                    <td><input type="checkbox" name="skills" value="Analytical">
-                                    <label for="skills">Analytical</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_torturer" value="Torturer">
+                                    <label for="skills_torturer" class="unique-skill">Torturer</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Antique Perfume">
-                                    <label for="skills">Antique Perfume</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_tracker" value="Tracker">
+                                    <label for="skills_tracker" class="unique-skill">Tracker</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Blitz">
-                                    <label for="skills">Blitz</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_trailblazer" value="Trailblazer">
+                                    <label for="skills_trailblazer" class="unique-skill">Trailblazer</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Bodyguard">
-                                    <label for="skills">Bodyguard</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_treasure_hunter" value="Treasure Hunter">
+                                    <label for="skills_treasure_hunter" class="unique-skill">Treasure Hunter</label></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" name="skills" value="Caffeine Junkie">
-                                    <label for="skills">Caffeine Junkie</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_u_turn" value="U-Turn">
+                                    <label for="skills_u_turn" class="unique-skill">U-Turn</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Cold Blooded">
-                                    <label for="skills">Cold Blooded</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_victimizer" value="Victimizer">
+                                    <label for="skills_victimizer" class="unique-skill">Victimizer</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Confidant">
-                                    <label for="skills">Confidant</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_watchman" value="Watchman">
+                                    <label for="skills_watchman" class="unique-skill">Watchman</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Crazy Eye">
-                                    <label for="skills">Crazy Eye</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Daredevil">
-                                    <label for="skills">Daredevil</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_workaholic" value="Workaholic">
+                                    <label for="skills_workaholic" class="unique-skill">Workaholic</label></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" name="skills" value="Detached Crewmember">
-                                    <label for="skills">Detached Crewmember</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_wrestler" value="Wrestler">
+                                    <label for="skills_wrestler" class="limited-skill">Wrestler</label></td>
                                     
-                                    <td><input type="checkbox" name="skills" value="Devotion">
-                                    <label for="skills">Devotion</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Director">
-                                    <label for="skills">Director</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Electrician">
-                                    <label for="skills">Electrician</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Expert">
-                                    <label for="skills">Expert</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="skills" value="Fortune Teller">
-                                    <label for="skills">Fortune Teller</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Frugivore">
-                                    <label for="skills">Frugivore</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Genius">
-                                    <label for="skills">Genius</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Green Thumb">
-                                    <label for="skills">Green Thumb</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Gunner">
-                                    <label for="skills">Gunner</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="skills" value="Hair Trigger">
-                                    <label for="skills">Hair Trigger</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Hygienist">
-                                    <label for="skills">Hygienist</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Intimidating">
-                                    <label for="skills">Intimidating</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Keen Eye">
-                                    <label for="skills">Keen Eye</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Mankind's Only Hope">
-                                    <label for="skills">Mankind's Only Hope</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="skills" value="Meds Junkie">
-                                    <label for="skills">Meds Junkie</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Metalworker">
-                                    <label for="skills">Metalworker</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Motivator">
-                                    <label for="skills">Motivator</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Mycologist">
-                                    <label for="skills">Mycologist</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="NERON's Only Friend">
-                                    <label for="skills">NERON's Only Friend</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="skills" value="Observant">
-                                    <label for="skills">Observant</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Meticulous">
-                                    <label for="skills">Meticulous</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Opportunist">
-                                    <label for="skills">Opportunist</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Panic">
-                                    <label for="skills">Panic</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Physicist">
-                                    <label for="skills">Physicist</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="skills" value="Pickpocket">
-                                    <label for="skills">Pickpocket</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Politician">
-                                    <label for="skills">Politician</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Polymath">
-                                    <label for="skills">Polymath</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Polyvalent">
-                                    <label for="skills">Polyvalent</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Possession">
-                                    <label for="skills">Possession</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="skills" value="Premonition">
-                                    <label for="skills">Premonition</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Rebel">
-                                    <label for="skills">Rebel</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Self-Sacrifice">
-                                    <label for="skills">Self-Sacrifice</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Shrink">
-                                    <label for="skills">Shrink</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Sneak">
-                                    <label for="skills">Sneak</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="skills" value="Strateguru">
-                                    <label for="skills">Strateguru</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Supervisor">
-                                    <label for="skills">Supervisor</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Torturer">
-                                    <label for="skills">Torturer</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Tracker">
-                                    <label for="skills">Tracker</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Trailblazer">
-                                    <label for="skills">Trailblazer</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="skills" value="Treasure Hunter">
-                                    <label for="skills">Treasure Hunter</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="U-Turn">
-                                    <label for="skills">U-Turn</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Victimizer">
-                                    <label for="skills">Victimizer</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Watchman">
-                                    <label for="skills">Watchman</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Workaholic">
-                                    <label for="skills">Workaholic</label></td>
-                                </tr>
-                                <tr>
-                                    <td>Limited skills:</td>
-                                    <td><input type="checkbox" name="skills" value="Apprentice">
-                                    <label for="skills">Apprentice</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Lethargy">
-                                    <label for="skills">Lethargy</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Paranoid">
-                                    <label for="skills">Paranoid</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Wrestler">
-                                    <label for="skills">Wrestler
-                                    </label></td>
+                                <td><input type="checkbox" name="skills" id="skills_xenobiologist" value="Xenobiologist">
+                                    <label for="skills_xenobiologist" class="exclusive-skill">Xenobiologist</label></td>
                                     
                                 </tr>
-                                <tr>
-                                    <td>Act II exclusive skills:</td>
-                                    <td><input type="checkbox" name="skills" value="Blinker">
-                                    <label for="skills">Blinker</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Xenobiologist">
-                                    <label for="skills">Xenobiologist</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Perfect Vision">
-                                    <label for="skills">Perfect Vision</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Carefree">
-                                    <label for="skills">Carefree</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="skills" value="Contortionist">
-                                    <label for="skills">Contortionist</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Inspiration">
-                                    <label for="skills">Inspiration</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Blessing">
-                                    <label for="skills">Blessing</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Dragonscale">
-                                    <label for="skills">Dragonscale</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Carnivore">
-                                    <label for="skills">Carnivore</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="skills" value="Commandant">
-                                    <label for="skills">Commandant</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Brute Force">
-                                    <label for="skills">Brute Force</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Blacksmith">
-                                    <label for="skills">Blacksmith</label></td>
-                                    
-                                    <td><input type="checkbox" name="skills" value="Smelter">
-                                    <label for="skills">Smelter</label></td>
-                                </tr>    
                             </tr>
                     </table></td>
                 </tr>
@@ -761,71 +853,70 @@ desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</label><b
                     <td><label for="traits">Traits: </label></td>
                     <td>Select up to 2 traits.<table>
                         <tr>
-                            <td><input type="checkbox" name="traits" value="hat">
-                                <label for="traits">Adventurer's Hat</label></td>
-                            <td><input type="checkbox" name="traits" value="agoraphobia">
-                                <label for="traits">Agoraphobia</label></td>
-                            <td><input type="checkbox" name="traits" value="Ailurophobia">
-                                <label for="traits">Ailurophobia</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_hat" value="hat">
+                                <label for="traits_hat">Adventurer's Hat</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_agoraphobia" value="agoraphobia">
+                                <label for="traits_agoraphobia">Agoraphobia</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_ailurophobia" value="Ailurophobia">
+                                <label for="traits_ailurophobia">Ailurophobia</label></td>
                             
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="traits" value="asocial">
-                                <label for="traits">Asocial</label></td>
-                            <td><input type="checkbox" name="traits" value="bionicarm">
-                                <label for="traits">Bionic Arm</label></td>
-                            <td><input type="checkbox" name="traits" value="capricious">
-                                <label for="traits">Capricious</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_asocial" value="asocial">
+                                <label for="traits_asocial">Asocial</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_bionicarm" value="bionicarm">
+                                <label for="traits_bionicarm">Bionic Arm</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_capricious" value="capricious">
+                                <label for="traits_capricious">Capricious</label></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="traits" value="Cat Allergy">
-                                <label for="traits">Cat Allergy</label></td>
-                            <td><input type="checkbox" name="traits" value="nills">
-                                <label for="traits">Chronic Illness</label></td>
-                            <td><input type="checkbox" name="traits" value="Chronic Vertigo">
-                                <label for="traits">Chronic Vertigo</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_catallergy" value="Cat Allergy">
+                                <label for="traits_catallergy">Cat Allergy</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_chronicillness" value="nills">
+                                <label for="traits_chronicillness">Chronic Illness</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_chronicvertigo" value="Chronic Vertigo">
+                                <label for="traits_chronicvertigo">Chronic Vertigo</label></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="traits" value="depression">
-                                <label for="traits">Depression</label></td>
-                            <td><input type="checkbox" name="traits" value="disabled">
-                                <label for="traits">Disabled</label></td>
-                            <td><input type="checkbox" name="traits" value="firsttime">
-                                <label for="traits">First Timer</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_depression" value="depression">
+                                <label for="traits_depression">Depression</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_disabled" value="disabled">
+                                <label for="traits_disabled">Disabled</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_firsttime" value="firsttime">
+                                <label for="traits_firsttime">First Timer</label></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="traits" value="germaphobe">
-                                <label for="traits">Germaphobe</label></td>
-                            <td><input type="checkbox" name="traits" value="globophobia">
-                                <label for="traits">Globophobia</label></td>
-                            <td><input type="checkbox" name="traits" value="hyper">
-                                <label for="traits">Hyperactive</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_germaphobe" value="germaphobe">
+                                <label for="traits_germaphobe">Germaphobe</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_globophobia" value="globophobia">
+                                <label for="traits_globophobia">Globophobia</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_hyper" value="hyper">
+                                <label for="traits_hyper">Hyperactive</label></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="traits" value="illiterate">
-                                <label for="traits">Illiterate</label></td>
-                            <td><input type="checkbox" name="traits" value="immunized">
-                                <label for="traits">Immunized</label></td>
-                            <td><input type="checkbox" name="traits" value="minor">
-                                <label for="traits">Minor</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_illiterate" value="illiterate">
+                                <label for="traits_illiterate">Illiterate</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_immunized" value="immunized">
+                                <label for="traits_immunized">Immunized</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_minor" value="minor">
+                                <label for="traits_minor">Minor</label></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="traits" value="pacifist">
-                                <label for="traits">Pacifist</label></td>  
-                            <td><input type="checkbox" name="traits" value="paranoia">
-                                <label for="traits">Paranoia</label></td>
-                            <td><input type="checkbox" name="traits" value="sixthsense">
-                                <label for="traits">Sixth Sense</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_pacifist" value="pacifist">
+                                <label for="traits_pacifist">Pacifist</label></td>  
+                            <td><input type="checkbox" name="traits" id="traits_paranoia" value="paranoia">
+                                <label for="traits_paranoia">Paranoia</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_sixthsense" value="sixthsense">
+                                <label for="traits_sixthsense">Sixth Sense</label></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="traits" value="telepath">
-                                <label for="traits">Telepath</label></td>
-                            <td><input type="checkbox" name="traits" value="Weapon Phobia">
-                                <label for="traits">Weapon Phobia</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_telepath" value="telepath">
+                                <label for="traits_telepath">Telepath</label></td>
+                            <td><input type="checkbox" name="traits" id="traits_weaponphobia" value="Weapon Phobia">
+                                <label for="traits_weaponphobia">Weapon Phobia</label></td>
                         </tr>
                 </table></td>
                 </tr>
-                <br>
                 
             
             </table>

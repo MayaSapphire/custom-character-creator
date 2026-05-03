@@ -29,6 +29,7 @@ function sanitize(input) {
 
 function makeLoadout() {
 
+
     var formData = new FormData(document.querySelector('form'));
 
     const name = sanitize(formData.get('name'));
@@ -46,8 +47,26 @@ function makeLoadout() {
     const neron_priority = sanitize(formData.get('neron_priority'));
     const glory_path = sanitize(formData.get('glory_path'));
 
-    const skills = sanitize(formData.getAll('skills').join('","'));
+    const rawSkills = formData.getAll('skills');
+    let problems = [];
+
+
+
+    if (rawSkills.length > 7) {
+        problems.push("You can only select up to 7 skills. You have selected " + rawSkills.length + ".");
+    }
+    if (rawSkills.filter(skill => skill.includes("Limited")).length > 1) {
+        problems.push("You can only select one Limited skill.");
+    }
+
+    const skills = sanitize(rawSkills.join('","'));
     const traits = sanitize(formData.getAll('traits').join('","'));
+
+    if (problems.length > 0) {
+        alert("There are problems with your input: \n - " + problems.join("\n - ") + "\nThis tool will still generate a loadout, but you may experience issues with importing this loadout into the game.");
+    }
+
+
 
     const output = `{
 "name":"${name}",
