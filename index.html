@@ -58,7 +58,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="gender">Gender: </label></td>
+                    <td><label>Gender: </label></td>
                     <td>
                         <input type="radio" name="gender" id="gender_female" value="female">
                         <label for="gender_female">Female </label>
@@ -72,14 +72,14 @@
                 </tr>
                 
                 <tr>
-                    <td><label for="pronouns">Pronouns: </label></td>
+                    <td><label>Pronouns: </label></td>
                     <td>
                         <input type="radio" name="pronouns" id="pronouns_she/her" value="she/her">
                         <label for="pronouns_she/her">she/her</label>
                         <input type="radio" name="pronouns" id="pronouns_he/him" value="he/him">
                         <label for="pronouns_he/him">he/him</label>
-                        <input type="radio" name="pronouns" id="pronouns they/them" value="they/them">
-                        <label for="pronouns they/them">they/them</label>
+                        <input type="radio" name="pronouns" id="pronouns_they/them" value="they/them">
+                        <label for="pronouns_they/them">they/them</label>
                         <input type="radio" name="pronouns" id="pronouns_it/it/its/itself" value="it/it/its/itself">
                         <label for="pronouns_it/it/its/itself">it/its</label>
                     </td>
@@ -99,7 +99,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="glory_path">Glory path: </label></td>
+                    <td><label>Glory path: </label></td>
                     <td>
                         <table>
                             <tr>
@@ -491,14 +491,21 @@ desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</span>
                                     </label>
                                     <br>
                                 </td>
+
+                                <td></td>
                                 
                             </tr>
                         </table>
                     </td>   
                 </tr>
                 <tr>
-                    <td><label for="skills">Skills: </label></td>
-                    <td>Select up to 7 skills, up to 1 of which can be Limited.<table>
+                    <td><label>Skills: </label></td>
+                    <td>Select up to 7 skills, up to 1 of which can be Limited. <br>
+                        Legend: <span class="unique-skill">Unique skill</span> 
+                        <span class="common-skill">Common skill</span> 
+                        <span class="limited-skill">Limited skill</span>
+                        <span class="exclusive-skill">Act II Exclusive skill</span>
+                        <table>
                             <tr>
                                 <td><input type="checkbox" name="skills" id="skills_analytical" value="Analytical">
                                     <label for="skills_analytical" class="unique-skill">Analytical</label></td>
@@ -682,8 +689,8 @@ desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</span>
                                     <label for="skills_lucky" class="common-skill">Lucky</label></td>
                                 </tr>
                                 <tr>
-                                <td><input type="checkbox" name="skills" id="skills_mankind's_only Hope" value="Mankind's Only Hope">
-                                    <label for="skills_mankind's_only Hope" class="unique-skill">Mankind's Only Hope</label></td>
+                                <td><input type="checkbox" name="skills" id="skills_mankind's_only_hope" value="Mankind's Only Hope">
+                                    <label for="skills_mankind's_only_hope" class="unique-skill">Mankind's Only Hope</label></td>
                                     
                                 <td><input type="checkbox" name="skills" id="skills_medic" value="Medic">
                                     <label for="skills_medic" class="common-skill">Medic</label></td>
@@ -845,12 +852,15 @@ desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</span>
                                 <td><input type="checkbox" name="skills" id="skills_xenobiologist" value="Xenobiologist">
                                     <label for="skills_xenobiologist" class="exclusive-skill">Xenobiologist</label></td>
                                     
-                                </tr>
+                                <td></td>
+
+                                <td></td>
                             </tr>
+                            
                     </table></td>
                 </tr>
                 <tr>
-                    <td><label for="traits">Traits: </label></td>
+                    <td><label>Traits: </label></td>
                     <td>Select up to 2 traits.<table>
                         <tr>
                             <td><input type="checkbox" name="traits" id="traits_hat" value="hat">
@@ -878,7 +888,7 @@ desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</span>
                                 <label for="traits_chronicvertigo">Chronic Vertigo</label></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="traits" id="traits_depression" value="depression">
+                            <td><input type="checkbox" name="traits" id="traits_depression" value="Depression">
                                 <label for="traits_depression">Depression</label></td>
                             <td><input type="checkbox" name="traits" id="traits_disabled" value="disabled">
                                 <label for="traits_disabled">Disabled</label></td>
@@ -914,13 +924,14 @@ desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</span>
                                 <label for="traits_telepath">Telepath</label></td>
                             <td><input type="checkbox" name="traits" id="traits_weaponphobia" value="Weapon Phobia">
                                 <label for="traits_weaponphobia">Weapon Phobia</label></td>
+                            <td></td>
                         </tr>
                 </table></td>
                 </tr>
                 
             
             </table>
-            <input type="submit" label="Submit">
+            <input type="submit">
             <br>
             <textarea id="Output" rows="18" cols="100"></textarea>
             <br>
@@ -930,7 +941,6 @@ desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</span>
             3.  Press the + button next to the message, then hit "upload your message as a file". <br>
             4.  Add the command "loadout import", hit Enter, and hope that it works.<br>
         </form> 
-    </p>
     <script src="script.js" async> </script>
 </body>
 </html>

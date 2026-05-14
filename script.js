@@ -24,7 +24,7 @@ function sanitize(input) {
     if (input == null) {
         return null
     }
-    return input.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;").replace(/\//g, "&#x2F;").replace(/\n/g, "\\n");
+    return input.replace(/"/g, "\\\"").replace(/\n/g, "\\n");
 }
 
 function makeLoadout() {
@@ -59,8 +59,8 @@ function makeLoadout() {
         problems.push("You can only select one Limited skill.");
     }
 
-    const skills = sanitize(rawSkills.join('","'));
-    const traits = sanitize(formData.getAll('traits').join('","'));
+    const skills = rawSkills.join('","');
+    const traits = formData.getAll('traits').join('","');
 
     if (problems.length > 0) {
         alert("There are problems with your input: \n - " + problems.join("\n - ") + "\nThis tool will still generate a loadout, but you may experience issues with importing this loadout into the game.");
