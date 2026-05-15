@@ -36,4 +36,9 @@ th, td {
     color: #000066;
     font-weight: bold;
 }
+
+.error {
+    color:#bb0000;
+    float:none;
+}
 tr:nth-child(even) {background-color: #f2f2f2;}

@@ -51,19 +51,48 @@ function makeLoadout() {
     let problems = [];
 
 
-
+    if (name.length > 12) {
+        problems.push("Length of name must be 12 characters or fewer. You have entered " + name.length + " characters.");
+    }
+    if (name_full.length > 60) {
+        problems.push("Length of full name must be 60 characters or fewer. You have entered " + name_full.length + " characters.");
+    }
+    if (race.length > 12) {
+        problems.push("Length of race must be 20 characters or fewer. You have entered " + race.length + " characters.");
+    }
+    if (emoji.length > 30) {
+        problems.push("Length of emoji must be 30 characters or fewer. You have entered " + emoji.length + " characters.");
+    }
+    if (desc.length > 100) {
+        problems.push("Length of description must be 100 characters or fewer. You have entered " + name.length + " characters.");
+    }
+    if (bio.length > 1000) {
+        problems.push("Length of bio must be 1000 characters or fewer. You have entered " + bio.length + " characters.");
+    }
     if (rawSkills.length > 7) {
         problems.push("You can only select up to 7 skills. You have selected " + rawSkills.length + ".");
     }
-    if (rawSkills.filter(skill => skill.includes("Limited")).length > 1) {
-        problems.push("You can only select one Limited skill.");
+    if (formData.getAll('traits').length > 2) {
+        problems.push("You can only select up to 2 traits. You have selected " + formData.getAll('traits').length + ".")
     }
 
-    const skills = rawSkills.join('","');
-    const traits = formData.getAll('traits').join('","');
+    /*if (rawSkills.filter(skill => skill.includes("Limited")).length > 1) {
+        problems.push("You can only select one Limited skill.");
+    }*/
+    let skills = "";
+    if (rawSkills.length > 0) { 
+        skills = "\"" +rawSkills.join('","') + "\"";
+    }
+    
+    let traits = ""
+    if (formData.getAll('traits').length > 0) {
+        traits = "\"" + formData.getAll('traits').join('","') + "\"";
+    }
 
     if (problems.length > 0) {
-        alert("There are problems with your input: \n - " + problems.join("\n - ") + "\nThis tool will still generate a loadout, but you may experience issues with importing this loadout into the game.");
+        document.getElementById("problems").innerHTML = "There are problems with your loadout:<br> <li>" + problems.join("</li><li>") + "</li>This tool will still generate a loadout, but you may experience issues with importing this loadout into the bot.<br>";
+    } else {
+        document.getElementById("problems").innerHTML = ""
     }
 
 
@@ -83,8 +112,8 @@ function makeLoadout() {
 "comms_priority":${comms_priority},
 "neron_priority":${neron_priority},
 "glory_path":"${glory_path}",
-"skills":["${skills}"],
-"traits":["${traits}"]
+"skills":[${skills}],
+"traits":[${traits}]
 }`
 
     document.getElementById("Output").innerHTML = output;

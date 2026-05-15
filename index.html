@@ -19,22 +19,22 @@
             <table>
                 <tr>
                     <td><label for="name">Name: </label></td>
-                    <td><input type="text" name="name" id="name" placeholder="Name of the character" required></td>
+                    <td><input type="text" name="name" id="name" placeholder="Name of the character" size="12"></td>
                 </tr>
 
                 <tr>
                     <td><label for="name_full">Full name: </label></td>
-                    <td><input type="text" name="name_full" id="name_full" placeholder="Full name of the character" required></td>
+                    <td><input type="text" name="name_full" id="name_full" placeholder="Full name of the character" size="60"></td>
                 </tr>
                 
                 <tr>
                     <td><label for="race">Race: </label></td>
-                    <td><input type="text" name="race" id="race" placeholder="Race of the character" required value="Human"></td>
+                    <td><input type="text" name="race" id="race" placeholder="Race of the character" value="Human" size="20"></td>
                 </tr>
 
                 <tr>
                     <td><label for="emoji">Emoji: </label></td>
-                    <td><input type="text" name="emoji" id="emoji" placeholder="Emoji for the character" required value="👤"></td>
+                    <td><input type="text" name="emoji" id="emoji" placeholder="Emoji for the character" value="👤"></td>
                 </tr>
 
                 <tr>
@@ -44,12 +44,12 @@
 
                 <tr>
                     <td><label for="image_url">Image URL: </label></td>
-                    <td><input type="text" name="image_url" id="image_url" placeholder="Link to the image" required value="None"></td>
+                    <td><input type="text" name="image_url" id="image_url" placeholder="Link to the image" value="None"></td>
                 </tr>
 
                 <tr>
                     <td><label for="desc">Description: </label></td>
-                    <td><input type="text" name="desc" id="desc" placeholder="Short description of the character"></td>
+                    <td><input type="text" name="desc" id="desc" placeholder="Short description of the character" size="100"></td>
                 </tr>
 
                 <tr>
@@ -931,8 +931,9 @@ desc: - 8 Glory for contacting Paola Rinaldo through Xyloph. ">xyloph2</span>
                 
             
             </table>
-            <input type="submit">
+            <input type="submit" value="Make Loadout">    
             <br>
+            <ul id="problems" class="error"></ul>
             <textarea id="Output" rows="18" cols="100"></textarea>
             <br>
             Instructions for importing this loadout: <br>
