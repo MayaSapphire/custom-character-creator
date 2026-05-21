@@ -68,6 +68,10 @@
                         <label for="gender_other">Other </label>
                         <input type="radio" name="gender" id="gender_none" value="none">
                         <label for="gender_none">None </label>
+                        <br>
+                        <input type="radio" name="gender" id="gender_custom" value="gender_custom">
+                        <label for="gender_custom">Custom gender: </label>
+                        <input type="text" name="gender_custom" id="gender_custom_txt" placeholder="Character's gender">
                     </td>
                 </tr>
                 
@@ -82,6 +86,10 @@
                         <label for="pronouns_they/them">they/them</label>
                         <input type="radio" name="pronouns" id="pronouns_it/it/its/itself" value="it/it/its/itself">
                         <label for="pronouns_it/it/its/itself">it/its</label>
+                        <br>
+                        <input type="radio" name="pronouns" id="pronouns_custom" value="pronouns_custom">
+                        <label for="pronouns_custom">Custom pronouns: </label>
+                        <input type="text" name="pronouns_custom" id="pronouns_custom_txt" placeholder="they/them/their/themself">
                     </td>
                 </tr>
 
@@ -90,11 +98,11 @@
                         
                     <td>
                         <label for="commander_priority">Commander: </label>
-                        <input type="number" name="commander_priority" id="commander_priority" min="1" max="100" required>
+                        <input type="number" name="commander_priority" id="commander_priority" min="1" max="100">
                         <label for="comms_priority">Comms officer: </label>
-                        <input type="number" name="comms_priority" id="comms_priority" min="1" max="100" required>
+                        <input type="number" name="comms_priority" id="comms_priority" min="1" max="100">
                         <label for="neron_priority">NERON admin: </label>
-                        <input type="number" name="neron_priority" id="neron_priority" min="1" max="100" required>
+                        <input type="number" name="neron_priority" id="neron_priority" min="1" max="100">
                     </td>
                 </tr>
 
