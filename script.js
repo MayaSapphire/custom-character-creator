@@ -1,4 +1,7 @@
 function convertColor(hexa){
+    if (!hexa) {
+        hexa = "#000000";
+    }
     var chunks = [];
     var tmp,i;
     hexa = hexa.substr(1); // remove the pound
@@ -22,12 +25,13 @@ function convertColor(hexa){
 
 function sanitize(input) {
     if (input == null) {
-        return null
+        return "";
     }
     return input.replace(/"/g, "\\\"").replace(/\n/g, "\\n");
 }
 
 function makeLoadout() {
+    let problems = [];
 
 
     var formData = new FormData(document.querySelector('form'));
@@ -42,9 +46,11 @@ function makeLoadout() {
     let bio = sanitize(formData.get('bio'));
     let gender = sanitize(formData.get('gender'));
     
-
     if (gender == "gender_custom") {
         gender = sanitize(formData.get("gender_custom"));
+        if (gender.length > 10) {
+            problems.push("Length of gender must be 10 characters or fewer. You have entered " + gender.length + " characters.");
+        }
     }
 
     let pronouns = sanitize(formData.get('pronouns'));
@@ -58,8 +64,11 @@ function makeLoadout() {
     let neron_priority = sanitize(formData.get('neron_priority'));
     let glory_path = sanitize(formData.get('glory_path'));
 
+    if (!color) {
+        color = "#000000";
+    }
+
     const rawSkills = formData.getAll('skills');
-    let problems = [];
 
 
     if (name.length > 12) {
@@ -69,13 +78,13 @@ function makeLoadout() {
         problems.push("Length of full name must be 60 characters or fewer. You have entered " + name_full.length + " characters.");
     }
     if (race.length > 12) {
-        problems.push("Length of race must be 20 characters or fewer. You have entered " + race.length + " characters.");
+        problems.push("Length of race must be 12 characters or fewer. You have entered " + race.length + " characters.");
     }
     if (emoji.length > 30) {
         problems.push("Length of emoji must be 30 characters or fewer. You have entered " + emoji.length + " characters.");
     }
     if (desc.length > 100) {
-        problems.push("Length of description must be 100 characters or fewer. You have entered " + name.length + " characters.");
+        problems.push("Length of description must be 100 characters or fewer. You have entered " + desc.length + " characters.");
     }
     if (bio.length > 1000) {
         problems.push("Length of bio must be 1000 characters or fewer. You have entered " + bio.length + " characters.");
@@ -107,12 +116,11 @@ function makeLoadout() {
     }
 
 
-
     const output = `{
 "name":"${name}",
 "name_full":"${name_full}",
 "race":"${race}",
-"emoji":"👤",
+"emoji":"${emoji}",
 "color":[${convertColor(color)}],
 "image_url":"${image_url}",
 "desc":"${desc}",
@@ -126,7 +134,6 @@ function makeLoadout() {
 "skills":[${skills}],
 "traits":[${traits}]
 }`
-
-    document.getElementById("Output").innerHTML = output;
+    document.getElementById("Output").value = output;
 
 }
