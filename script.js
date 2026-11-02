@@ -137,3 +137,39 @@ function makeLoadout() {
     document.getElementById("Output").value = output;
 
 }
+
+async function onImageUrlChange() {
+    let imageUrl = document.getElementById("image_url").value;
+    let imgInfoTxt = document.getElementById("imgInfoTxt");
+    // check that it's not empty
+    if (!(imageUrl && imageUrl !== "None")) {
+        imgInfoTxt.innerText = "No image URL provided.";
+        document.getElementById("image_preview").hidden = true;
+        return;
+    } 
+    // check that it's not a WebP image
+    try {
+        const response = await fetch(imageUrl, { method: 'GET' });
+        const contentType = response.headers.get('Content-Type');
+        if (contentType && contentType.startsWith('image/webp')) {
+            imgInfoTxt.innerText = "WebP images are not supported. Please use a JPEG or PNG image.";
+            document.getElementById("image_preview").hidden = true;
+            return;
+        }
+        else if (contentType && (contentType.startsWith('image/jpeg') || contentType.startsWith('image/png'))) {
+            document.getElementById("image_preview").hidden = false;
+            document.getElementById("image_preview").src = imageUrl;
+            imgInfoTxt.innerText = "Image is valid.";
+        } else {
+            imgInfoTxt.innerText = "Unsupported image type. Please use a JPEG or PNG image.";
+            document.getElementById("image_preview").hidden = true;
+            return;
+        }
+    } catch (error) {
+        imgInfoTxt.innerText = "Error checking image type.";
+        document.getElementById("image_preview").hidden = true;
+        return;
+    }
+
+    await checkImageType(imageUrl);
+}

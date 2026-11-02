@@ -44,7 +44,11 @@
 
                 <tr>
                     <td><label for="image_url">Image URL: </label></td>
-                    <td><input type="text" name="image_url" id="image_url" placeholder="Link to the image" value="None"></td>
+                    <td>
+                        <input type="text" name="image_url" id="image_url" placeholder="Link to the image" value="None" onchange="onImageUrlChange()">
+                        <p id="imgInfoTxt"></p>
+                        <img id="image_preview" src="None" alt="Image preview" style="max-width: 500px; max-height: 500px;" hidden>
+                    </td>
                 </tr>
 
                 <tr>
