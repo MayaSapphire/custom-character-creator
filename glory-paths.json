@@ -1,0 +1,297 @@
+{
+  "anomalies": [
+    "Xenobiologist research: ???",
+    "old: Nano-Ladybugs",
+    "difficulty: 2",
+    "plush: astro",
+    "flavor: Space is full of wonders and secrets hiding among the stars, just waiting to be found. You want to see it all.",
+    "desc: - 2 Glory for every spatial anomaly you discover.",
+    "- 4 Glory for every anomaly the Daedalus visits."
+  ],
+
+  "artifacts": [
+    "Xenobiologist research: Magna-Gyro Implants",
+    "gold: SNC Kitchen",
+    "difficulty: 4",
+    "plush: shoot",
+    "flavor: As an intergalactic explorer, your dream is to amass a vast hoard of alien artifacts... and keep them to yourself, obviously!",
+    "desc: - 2 Glory for each alien artifact found by the crew."
+  ],
+
+  "astronomer": [
+    "Xenobiologist research: Bio-Insulator",
+    "gold: Thalasso",
+    "difficulty: 3",
+    "plush: astro",
+    "flavor: You have devoted your life to discovering and exploring new worlds, and now you must do so to ensure the survival of humanity!",
+    "desc: - 2 Glory for every planet you discover.",
+    "- 1 Glory for entering orbit of a new planet."
+  ],
+
+  "botanist": [
+    "Xenobiologist research: Floral Pheromones",
+    "gold: Nano-Ladybugs",
+    "difficulty: 2",
+    "plush: plant",
+    "flavor: They might be concerned with the fauna, but your dream is to grow your own exotic garden full of alien fruit!",
+    "desc: - 3 Glory for each Alien Fruit you plant."
+  ],
+
+  "capricious": [
+    "Xenobiologist research: Teleport Pads",
+    "gold: Hyperthermal Rounds",
+    "difficulty: 3",
+    "plush: tech",
+    "flavor: You just want to have fun, and you want to do it your way. When you get a capricious urge, you need to act on it!",
+    "desc: - 3 Glory for every successfully completed Capricious objective."
+  ],
+
+  "chef": [
+    "Xenobiologist research: ???",
+    "gold: SNC Kitchen",
+    "difficulty: 3",
+    "plush: chef",
+    "flavor: You want to put the 'art' back in 'culinary arts'! Too bad availability of quality ingredients is limited here.",
+    "desc: - 2 Glory for each premium food you successfully cook."
+  ],
+
+  "commander": [
+    "Xenobiologist research: Supreme Authority",
+    "gold: ACTOPI Protocol",
+    "difficulty: 4",
+    "plush: social",
+    "flavor: As first in line for the crew's leadership, you must direct the ship and its occupants towards a brighter future!",
+    "desc: - 3 Glory for every planet the Daedalus reaches.",
+    "- 8 Glory for leading the crew to Eden."
+  ],
+
+  "conqueror": [
+    "Xenobiologist research: Draconic Exosuits",
+    "gold: Targeting Assist",
+    "difficulty: 3",
+    "plush: force",
+    "flavor: You've been given a golden opportunity to explore the stars and conquer many worlds. You will leave your mark on this universe.",
+    "desc: - 4 Glory for every planet fully explored."
+  ],
+
+  "craftsman": [
+    "Xenobiologist research: Anatidae Compression Algorithm",
+    "gold: Hyperthermal Rounds",
+    "difficulty: 3",
+    "plush: craft",
+    "flavor: Surrounded by all this advanced technology, you must prove that there's nothing you can't understand the inner workings of. You'll be the one to build it all.",
+    "desc: - 2 Glory for every blueprint you build or item you craft."
+  ],
+
+  "dangerous": [
+    "Xenobiologist research: RW Mage Book",
+    "gold: Dynarcade",
+    "difficulty: 3",
+    "plush: chef",
+    "flavor: You are a force to be reckoned with! You just need to prove your skills in hand-to-hand combat. And surely the crew will respect you with a title or two.",
+    "desc: - 2 Glory for each Fight event you encounter on an expedition.",
+    "- 4 Glory the first time you earn each Title."
+  ],
+
+  "defender": [
+    "Xenobiologist research: Bionic Interface",
+    "gold: Dynarcade",
+    "difficulty: 2",
+    "plush: shoot",
+    "flavor: Your mission is to protect the crew from invaders. If any hostile life-forms come aboard, you're the first one on call to dispatch them.",
+    "desc: - 3 Glory for every hostile alien killed."
+  ],
+
+  "designer": [
+    "Xenobiologist research: Standardized Recognition",
+    "gold: Data Recovery",
+    "difficulty: 2",
+    "plush: neron",
+    "flavor: You are intimately familiar with the design of this ship, and nothing would be more fulfilling than to see it reach its maximum potential.",
+    "desc: - 2 Glory for every NERON project installed."
+  ],
+
+  "diplomat": [
+    "Xenobiologist research: Machine Empathy",
+    "gold: Jukebox",
+    "difficulty: 5",
+    "plush: social",
+    "flavor: Your goal is to reach out to and study new forms of alien life, even if said life is trying to kill you...",
+    "desc: - 2 Glory for every encounter with alien life-forms."
+  ],
+
+  "drones": [
+    "Xenobiologist research: Stem Supplements",
+    "gold: Sentry Turrets",
+    "difficulty: 4",
+    "plush: tech",
+    "flavor: Your drones are the cutting edge of technology, but science is always striving to be even better. Your goal is to help your drones reach their peak!",
+    "desc: - 4 Glory each time you upgrade a Drone."
+  ],
+
+  "explorer": [
+    "Xenobiologist research: Macro-Oculators",
+    "gold: Targeting Assist",
+    "difficulty: 4",
+    "plush: astro",
+    "flavor: You are the most eager to lead expeditions to new worlds, and reap the bounties (and glory) they provide.",
+    "desc: - 3 Glory for each expedition you embark upon."
+  ],
+
+  "fortunes": [
+    "Xenobiologist research: Predictive Neuron Banks",
+    "gold: Nano-Ladybugs",
+    "difficulty: 3",
+    "plush: astro",
+    "flavor: Not many people believe you can speak with the dead and draw wisdom from the stars. You will prove it by telling their fortunes and showing them the truth!",
+    "desc: - 2 Glory each time you tell someone's fortune. Earn 3 instead if you successfully predict a positive or negative outcome."
+  ],
+
+  "generic": [
+    "Xenobiologist research: ???",
+    "gold: SNC Kitchen",
+    "difficulty: 1",
+    "plush: it",
+    "flavor: You're just happy to be here! Stay alive and don't do anything stupid!",
+    "desc: - No extra glory earned from objectives."
+  ],
+
+  "healer": [
+    "Xenobiologist research: Conscious Pathfinding",
+    "gold: Thalasso",
+    "difficulty: 2",
+    "plush: heal",
+    "flavor: Your life's goal is to spread kindness and goodwill to all good-hearted life-forms. You will restore their bodies, minds, and spirits.",
+    "desc: - 2 Glory for every illness or injury you cure."
+  ],
+
+  "hunter": [
+    "Xenobiologist research: VR HUD",
+    "gold: Targeting Assist",
+    "difficulty: 5",
+    "plush: shoot",
+    "flavor: Nothing gets the juices flowing better than sitting in the cockpit of a patroller and gunning down hostiles with your mad skills.",
+    "desc: - 1 Glory for every 2 Hunters you kill."
+  ],
+
+  "lover": [
+    "Xenobiologist research: Protein Injector",
+    "gold: Thalasso",
+    "difficulty: 1",
+    "plush: force",
+    "flavor: Science, exploration, bah, none of that matters if you can't hook up with some hotties along the way. You'll win them over with your good looks and your charm or die trying!",
+    "desc: - 2 Glory each time someone you have flirted with flirts back.",
+    "- 2 Glory each time you Do The Thing."
+  ],
+
+  "moh": [
+    "Xenobiologist research: Ultimate Immunity",
+    "gold: Hypersleep Pod",
+    "difficulty: 3",
+    "plush: heal",
+    "flavor: You are the last hope for humanity! Your goal is to stay alive and help complete research that requires your presence.",
+    "desc: - 1 Glory for every day you have survived.",
+    "- 4 Glory for each research project that requires your presence."
+  ],
+
+  "mush_cure": [
+    "Xenobiologist research: Auto-Immune Responders",
+    "gold: Underfloor Heating",
+    "difficulty: 3",
+    "plush: research",
+    "flavor: Your life's work has been to find the cure to the Mush parasite. It can be reversed, they don't have to die!",
+    "desc: - 5 Glory for completing Retro-Fungal Serum.",
+    "- 5 Glory if a Mush agent is successfully cured."
+  ],
+
+  "mush_hunter": [
+    "Xenobiologist research: Caffeinated Enzymes",
+    "gold: Industrial Roaster",
+    "difficulty: 1",
+    "plush: force",
+    "flavor: Those dirty mushrooms, on YOUR precious ship?! Inconceivable! You must eliminate them as quickly as possible!",
+    "desc: - 3 Glory for every Mush agent killed."
+  ],
+
+  "mush_research": [
+    "Xenobiologist research: Self-Cleaning Epidermis",
+    "gold: Noise Reducer",
+    "difficulty: 4",
+    "plush: research",
+    "flavor: As one of the most brilliant minds aboard this ship, you must spearhead the research against the Mush and prevent them from taking over.",
+    "desc: - 3 Glory for every anti-Mush research completed."
+  ],
+
+  "pilgred": [
+    "Xenobiologist research: Animal Bonding",
+    "gold: Scrap Heap",
+    "difficulty: 3",
+    "plush: pilgred",
+    "flavor: The PILGRED reactor is your baby, and you are the most qualified to repair it. All of this will be for nothing if you can't get out of deep space!",
+    "desc: - 2 Glory for every PILGRED repair completed."
+  ],
+
+  "psychopath": [
+    "Xenobiologist research: Hyper Coffee",
+    "gold: Factory Stripes",
+    "difficulty: 2",
+    "plush: shoot",
+    "flavor: You're a bit too eager to murder things, and that is your objective. Just try not to kill something others will miss.",
+    "desc: - 2 Glory for every living thing you kill."
+  ],
+
+  "rebel": [
+    "Xenobiologist research: Proximity Observation",
+    "gold: Secret Compartments",
+    "difficulty: 2",
+    "plush: it",
+    "flavor: You are not alone in your fight against the Mush! Your top priority is to contact the rebel bases and enlist the aid of their knowledge and resources.",
+    "desc: - 2 Glory for each Rebel transmission decoded."
+  ],
+
+  "shipshape": [
+    "Xenobiologist research: Structural Integrity Analyzer",
+    "gold: Holographic Blueprints",
+    "difficulty: 4",
+    "plush: tech",
+    "flavor: You built this ship, and it's up to you to prove that your work is not a pile of space junk. What they don't know won't hurt them...",
+    "desc: - 2 Glory for every 20 Hull Points repaired.",
+    "- 1 Glory every cycle the ship spends above 90 hull (from day 2 onwards)."
+  ],
+
+  "trader": [
+    "Xenobiologist research: Route Optimization",
+    "gold: Noise Reducer",
+    "difficulty: 3",
+    "plush: social",
+    "flavor: You're a person of many talents, but nothing speaks to you more than the universal language of business. Your goal is to conduct trades with aliens!",
+    "desc: - 4 Glory for each successful trade made with alien ships."
+  ],
+
+  "xeno_research": [
+    "Xenobiologist research: Fractal Lenses",
+    "gold: ACTOPI Protocol",
+    "difficulty: 2",
+    "plush: research",
+    "flavor: There is no shortage of things to learn about alien races. Your objective is to study them and find every useful application of their biology.",
+    "desc: - 2 Glory for every completed Xenobiologist research."
+  ],
+
+  "xyloph": [
+    "Xenobiologist research: Neural Bus",
+    "gold: SNC Kitchen",
+    "difficulty: 2",
+    "plush: social",
+    "flavor: You are the head of communications aboard this ship, but your primary goal is to contact Xyloph and reunite with Kivanc Terzi.",
+    "desc: - 8 Glory for contacting Kivanc Terzi through Xyloph."
+  ],
+
+  "xyloph2": [
+    "Xenobiologist research: Counter-Jammers",
+    "gold: Enhanced Security",
+    "difficulty: 2",
+    "plush: social",
+    "flavor: You are the head of communications aboard this ship, but your primary goal is to contact Xyloph and reunite with Paola Rinaldo.",
+    "desc: - 8 Glory for contacting Paola Rinaldo through Xyloph."
+  ]
+}
