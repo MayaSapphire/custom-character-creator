@@ -1,0 +1,838 @@
+{
+  "Analytical": {
+    "Chocolate": true,
+    "Effect": "- You have a 50% chance of preventing random events in the room you're in, as long as you are standing up.\n- Enables the `inspect` command which, for 1 AP/1 tech point, prevents the next random cycle change event from occurring there.",
+    "Flavor Text": "There were so many corners cut during this ship's construction, only you really know how to keep this thing together.",
+    "Random Description": "Knows how to keep a ship together.",
+    "Unique": true
+  },
+  "Antique Perfume": {
+    "Chocolate": false,
+    "Effect": "- Whenever you take a shower, you are immune to contracting spores until the end of the next cycle.\n- Reduces the cost of taking a shower by 1 AP.",
+    "Flavor Text": "Ah yesh they knew how to make real perfumesh in Fraigonard'sh boutiquesh in Nineteen Shixty Shixsh...",
+    "Random Description": "A connoisseur of exotic scents.",
+    "Unique": true
+  },
+  "Apprentice": {
+    "Chocolate": false,
+    "Effect": "- You can copy a skill known by a crewmate. Type `copy <skill>` while in the same room as another person who knows that skill, and you'll learn it for yourself for 1 AP. This replaces Apprentice.",
+    "Flavor Text": "By attentively watching what their mentor does, the apprentice can quickly pick up the same knowledge and actions.",
+    "Limited": true,
+    "Random Description": "Able to adapt to any situation.",
+    "Unique": true
+  },
+  "Astrophysicist": {
+    "Chocolate": false,
+    "Effect": "- Scanning for planets costs you 1 less AP.\n- When analyzing planets, you will uncover one additional zone per action.",
+    "Flavor Text": "Skilled in scanning for planets in range or to determine their composition.",
+    "Level 1": true,
+    "Magebook": true,
+    "Random Description": "Dabbles in astro-navigation."
+  },
+  "Biologist": {
+    "Can Read Pills": true,
+    "Chocolate": false,
+    "Effect": "- You can read the properties of pills.\n- When relaying research, you get a 4% bonus to progress made.\n- Enables action `distill <pill>` available in the Medlab with the Narcotics Distiller operational.",
+    "Flavor Text": "Highly skilled in laboratory research.",
+    "Magebook": true,
+    "Random Description": "Has a minor degree in biology."
+  },
+  "Blacksmith": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- Creates the Anvil in Front Storage.\n- Enables the `study <blueprint>` command, which allows you to memorize a blueprint.\n- Enables the `craft <item>` command, which lets you build a memorized recipe. Must be at the Anvil.\n- Gives 1 Craft Point a day, which can be used for crafting, building blueprints, and smelting.",
+    "Flavor Text": "Even in the 32nd century, being able to shape metal by hand has myriad applications.",
+    "Random Description": "Knows how to work metal the old-fashioned way.",
+    "Skill AP Maximum": 2,
+    "Skill AP Per Day": 1,
+    "Skill AP Type": "craft",
+    "Unique": true
+  },
+  "Blessing": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- Enables the `bless <player>` command which, for 2 AP, attempts to cure the target's psychological or physical illness. Has a greater chance of success on psychological illness. Does nothing if the target has no illnesses.",
+    "Flavor Text": "Come here, my child - accept the Divine into your heart and transcend your mortal shortcomings.",
+    "Random Description": "Has unwavering faith. It's quite contagious.",
+    "Unique": true
+  },
+  "Blinker": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- Enables action `blink <room>` which, for 1 AP, teleports you to the target room. `<room>` can also be `expo` or the name of a patrol ship. This costs 3 AP if you are teleporting into or out of the Daedalus. You can use this action regardless of injuries or guardians.\n- When getting lost on an expo, you automatically return to the room from which you departed at no cost.",
+    "Flavor Text": "Space is merely a suggestion for some gifted individuals.",
+    "Limited": true,
+    "Random Description": "Blink and you'll miss them.",
+    "Unique": true
+  },
+  "Blitz": {
+    "Chocolate": true,
+    "Effect": "- While on an expo, and a negative event is rolled, the event will be replaced with a random fight event from the same zone instead.\n- +2 to expedition combat strength.",
+    "Flavor Text": "Move, move, move! Hit them before they hit us!",
+    "Random Description": "Quick to take up arms in a tense situation.",
+    "Unique": true
+  },
+  "Bodyguard": {
+    "Chocolate": true,
+    "Effect": "- +2 max HP.\n- Guarding costs 1 less AP.\n- While guarding, 50% chance to intercept attacks made towards others in the same room.\n- While on an expo, if personal damage would cause someone else in the team to die, you take the damage instead.",
+    "Flavor Text": "GET DOWN!",
+    "Random Description": "Protective of fellow crew.",
+    "Unique": true
+  },
+  "Botanist": {
+    "Can Read Fruit": true,
+    "Chocolate": false,
+    "Effect": "- You can read the properties of fruits and plants.\n- You gain 2 plant points per day, which you will use automatically in place of AP when performing a plant-related command.\n- Harvesting a plant on an expo produces an additional fruit.",
+    "Flavor Text": "Capable of distinguishing the characteristics of the various plants and fruits. They are also equally effective when maintaining the garden.",
+    "Level 1": true,
+    "Magebook": true,
+    "Random Description": "Lover of plants and gardening.",
+    "Skill AP Maximum": 4,
+    "Skill AP Per Day": 2,
+    "Skill AP Type": "plant"
+  },
+  "Brute Force": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- Gives 2 force points a day which can be used in place of AP to perform actions at terminals or repairing items. However, when doing so, you have a chance to break the equipment or tool you're working with after the action completes. You can toggle whether or not you will use these points with the `force` action.",
+    "Flavor Text": "The metal box isn't working you say? POW! How about now?",
+    "Random Description": "An expert of percussive maintenance.",
+    "Skill AP Maximum": 4,
+    "Skill AP Per Day": 2,
+    "Skill AP Type": "force",
+    "Unique": true
+  },
+  "Builder": {
+    "Chocolate": true,
+    "Effect": "- Building blueprints costs 1 less AP and has a chance to not consume components (only when more than 1 of said component is required).\n- +40% hull points regained when repairing the hull.\n- Enables command `rewrite <blueprint>` which for 2 AP/1 craft point changes a target blueprint into another blueprint of the same category.\n- Enables command `nerox <blueprint type>` which allows you to specify a category of blueprint to retrieve from the Nerox Machine.",
+    "Flavor Text": "A true builder is resourceful and efficient when throwing raw materials together.",
+    "Magebook": true,
+    "Random Description": "Worked in construction for a good few years."
+  },
+  "Caffeine Junkie": {
+    "Chocolate": false,
+    "Effect": "- When drinking Coffee, you gain an additional 2 AP.",
+    "Flavor Text": "The caffeine junkie is twice as effective as their colleagues when they have access to the coffee machine.",
+    "Random Description": "Rarely seen without a fresh cup of coffee.",
+    "Unique": true
+  },
+  "Carefree": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- When you lose morale, 33% chance to reduce the amount lost by 1. You can use and benefit from the `befriend`/`play` commands despite not being a minor.",
+    "Flavor Text": "Your only concern in this life is to maximize your enjoyment. So what if you're doomed? You'll just have to go out with a bang!",
+    "Random Description": "Doesn't seem bothered by the brutality of deep space living.",
+    "Unique": true
+  },
+  "Carnivore": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- Steaks and other protein-based foods give you +1 AP and +1 Morale, and satisfaction is halved. Chance of getting illnesses from these foods (even decomposing ones) is reduced by 66%.",
+    "Flavor Text": "It's said that devouring the flesh of your enemies grants you their strength.",
+    "Random Description": "Has a seemingly unsatiable appetite for meat.",
+    "Unique": true
+  },
+  "Charismatic": {
+    "Chocolate": true,
+    "Effect": "- Gain 2 social points per day, which are used automatically in place of AP to trade, or perform other social actions.\n- You can accept or decline trades on the Comms Officer's behalf.\n- Enables the `pep <player>` command which, for 1 AP/1 social point, gives 1 AP. Can be used once per player per day.",
+    "Flavor Text": "You have great people skills and know how to motivate the masses",
+    "Magebook": true,
+    "Random Description": "A real people pleaser.",
+    "Skill AP Maximum": 4,
+    "Skill AP Per Day": 2,
+    "Skill AP Type": "social"
+  },
+  "Chef": {
+    "Can Read Food": true,
+    "Chocolate": false,
+    "Effect": "- You can read the properties of consumables.\n- Gain 4 chef points per day, which is automatically used in place of AP to perform food-related activities (cooking, freezing).\n- When cooking a ration, you have a small chance to produce a high-quality meal.\n- Can cook fruit into Juice, removing all chance-based effects and preserving it a little longer.",
+    "Flavor Text": "Formidable when it comes to knocking meals together. They also have an impressive awareness of what you should eat.",
+    "Level 1": true,
+    "Magebook": true,
+    "Random Description": "Handy with all sorts of kitchen utensils.",
+    "Skill AP Maximum": 8,
+    "Skill AP Per Day": 4,
+    "Skill AP Type": "chef"
+  },
+  "Chemist": {
+    "Can Read Pills": true,
+    "Chocolate": true,
+    "Effect": "- Gain 2 research points per day, which are used automatically in place of AP to do research.\n- Allows you to use the Narcotics Distiller more times per day for 1 research point per pill.\n- You can read the properties of pills.",
+    "Flavor Text": "You know the research lab like the back of your hand, and can use it more efficiently than others",
+    "Magebook": true,
+    "Random Description": "Can name every element on the periodic table."
+  },
+  "Cold Blooded": {
+    "Chocolate": false,
+    "Effect": "- You gain 2 AP when you witness a harmful random event in the same room as you, unless you are a direct target.",
+    "Flavor Text": "In space, anything can and does happen. Knowing how to keep calm is extremely useful.",
+    "Random Description": "Capable of uncanny levels of focus even in dire situations.",
+    "Unique": true
+  },
+  "Commandant": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- Increases expo combat strength by +1 per crew member, and ensures that damage from Fight events is evenly distributed.\n- Enables the `subordinate <player>` command for 1 AP; can only select one player at a time. Weapons (including turrets/patrollers) have accuracy increased by 1.5x and damage by +1 for both you and your subordinate. Your subordinate must be in the same room as you to get the buff.",
+    "Flavor Text": "A soldier is only as good as their commanding officer, and you are one of the best.",
+    "Random Description": "Quick to take charge, and good at it.",
+    "Unique": true
+  },
+  "Confidant": {
+    "Chocolate": false,
+    "Effect": "- Enables other players to use the `chitchat` command on you, which for 1 AP provides them with 2 morale and reveals their most recent actions to you. The higher your own morale, the more actions you see.",
+    "Flavor Text": "Discreet and loyal, you share everyone's pain and as such have the sympathy of the whole crew...",
+    "Random Description": "Always willing to lend a sympathetic ear.",
+    "Unique": true
+  },
+  "Contortionist": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- Increases the chances of repairs, dismantling, and reinforcing by 50%.\n- 33% chance to negate an accident or injury (like the ones induced from getting shot/stabbed).\n- Prevents instant death events from expos that target you.",
+    "Flavor Text": "Your body is flexible and your extra limbs allow you to multitask in ways that simpler lifeforms can only dream of!",
+    "Random Description": "Can twist their body in exotic and unexpected ways.",
+    "Unique": true
+  },
+  "Cosmologist": {
+    "Chocolate": true,
+    "Effect": "- Gain 2 astro points per day, which are used automatically in place of AP to perform actions at the Astro Terminal.\n- +1 planet slot at the Astro Terminal.\n- When the ship moves, you do not lose your stored planets.\n- Discovering an anomaly when scanning does not prevent you from discovering a planet.",
+    "Flavor Text": "You know all of the hidden tips and tricks hidden within the astro table",
+    "Magebook": true,
+    "Random Description": "Fascinated by the wonders of the universe.",
+    "Skill AP Maximum": 4,
+    "Skill AP Per Day": 2,
+    "Skill AP Type": "astro"
+  },
+  "Crazy Eye": {
+    "Chocolate": false,
+    "Effect": "- Aggressive actions targeting you cost an additional 2 AP.",
+    "Flavor Text": "There is no way to take you by surprise. You foresee all attacks from your enemies as well as those from your so-called allies.",
+    "Random Description": "Has an unsettling aura which makes even aggressors think twice.",
+    "Unique": true
+  },
+  "Creative": {
+    "Chocolate": false,
+    "Effect": "- When failing a task, you have a 50% chance to regain 1 AP.",
+    "Flavor Text": "Able to find unorthodox solutions to complicated problems.",
+    "Random Description": "Sometimes you need to think outside the box."
+  },
+  "Daredevil": {
+    "Chocolate": true,
+    "Effect": "- 50% chance to dodge incoming fire from hunters while in a patrol ship/pasiphae.\n- Taking off and landing (including Jetpack) each costs 1 AP less.",
+    "Flavor Text": "Everyone else thinks you have a deathwish, but no one knows the patroller's capabilities better than you!",
+    "Random Description": "Reckless when behind the wheel, but no doubt skilled.",
+    "Unique": true
+  },
+  "Demolitions Expert": {
+    "Chocolate": true,
+    "Effect": "- Enables the `sabotage` and `dismantle` actions.\n- The Drill grants you +50% dismantle and sabotage chance, and +2 expo combat strength.\n- Halves incoming damage from all kinds of explosions.\n- +50% damage and expo combat strength when using a Drill, Grenade, or Rocket Launcher.",
+    "Flavor Text": "Unorthodox ways sometimes pay off.",
+    "Random Description": "Comfortable around volatile materials and equipment."
+  },
+  "Designer": {
+    "Chocolate": false,
+    "Effect": "- You gain 2 neron points per day, which is automatically used in place of AP when you relay projects in the Nexus.\n- Grants a 3% bonus to all your relays in the Nexus.",
+    "Flavor Text": "Good application starts with good design!",
+    "Level 1": true,
+    "Random Description": "Can put together a detailed system from scratch.",
+    "Skill AP Maximum": 4,
+    "Skill AP Per Day": 2,
+    "Skill AP Type": "neron"
+  },
+  "Detached Crewmember": {
+    "Chocolate": false,
+    "Effect": "- You lose no morale when a crewmate dies.\n- You cannot contract psychological illness when witnessing a death.\n- On day change, if you have spent more than 4 cycles in a row completely alone, you do not lose morale.",
+    "Flavor Text": "The unconcerned crewmember is cold, hard, and unfeeling. They are unaffected by deaths of teammates.",
+    "Lost as Mush": true,
+    "Random Description": "Can come across as cold and apathetic.",
+    "Unique": true
+  },
+  "Determined": {
+    "Chocolate": false,
+    "Effect": "- When failing a task, the chance of succeeding on retry increases by 50% instead of 25%.\n- You can attempt to `connect` to Sol twice per day instead of once.",
+    "Flavor Text": "Doesn't take failure lightly. The job will get done.",
+    "Random Description": "Once they begin their task, nothing can distract the determined player."
+  },
+  "Devotion": {
+    "Chocolate": false,
+    "Effect": "- Accepting a mission from the commander grants you 3 additional AP.",
+    "Flavor Text": "In the heat of the action, we can count on you.",
+    "Random Description": "Ready to perform their duties at the drop of a hat.",
+    "Unique": true
+  },
+  "Diplomat": {
+    "Chocolate": false,
+    "Effect": "- Prevents fights while you're on an expedition.\n- Enables the `ceasefire` command which for 1 AP (once per game) causes all aggressive actions in the same room as you to fail for 3 cycles or until you leave the room.",
+    "Flavor Text": "A good diplomat knows how to communicate effectively with extra-terrestrials.",
+    "Magebook": true,
+    "Random Description": "A master of communication even across language barriers."
+  },
+  "Director": {
+    "Chocolate": true,
+    "Effect": "- While you're in the Lab, research relays are guaranteed to provide the maximum amount of progress.",
+    "Flavor Text": "Even when you can't lift a finger, your wisdom and experience are a valuable asset during research.",
+    "Random Description": "A natural leader when it comes to research.",
+    "Unique": true
+  },
+  "Dragonscale": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- Reduces all \"blunt\" physical damage taken by 1 point. Fire/heat accidents, damage, and injuries are negated entirely.\n- Crewmembers with this skill are immune to instant death from Volcano zones.",
+    "Flavor Text": "You are a dragon and a warrior! It takes a lot to bring you down.",
+    "Random Description": "Durable and unfazed by heat.",
+    "Unique": true
+  },
+  "Electrician": {
+    "Chocolate": true,
+    "Effect": "- Enables the `hack <terminal>` command without the Hacker Kit, though this requires a piece of Scrap Metal and is half as likely to succeed. Consumes the Scrap Metal on a successful attempt.\n- While on the Bridge, 50% chance to thwart a signal break or a lost rebel base connection.",
+    "Flavor Text": "There's more than one way around a protected system. As long as the right wire gets the right signal, the means is irrelevant!",
+    "Random Description": "Knows a trick or two to getting machines to cooperate.",
+    "Unique": true
+  },
+  "Engineer": {
+    "Chocolate": true,
+    "Effect": "- Gives 2 machine points per day, which is automatically used in place of AP when operating heavy machinery.\n- Accident chance when operating machinery is divided by 5.",
+    "Flavor Text": "Machines are your life. But if they ask you for a dispenser one more time...",
+    "Magebook": true,
+    "Random Description": "Certified to handle all kinds of heavy machinery.",
+    "Skill AP Maximum": 4,
+    "Skill AP Per Day": 2,
+    "Skill AP Type": "machine"
+  },
+  "Expert": {
+    "Chocolate": false,
+    "Effect": "- +20% base success chance to complete a task.\n- +20% chance to get dirty from any source of dirtiness, or get injured by an accident.",
+    "Flavor Text": "Your skills are impressive, but your disregard for your own safety is equally so!",
+    "Random Description": "Values efficiency over safety.",
+    "Unique": true
+  },
+  "Fencer": {
+    "Chocolate": true,
+    "Effect": "- Minimum damage when using bladed melee weapons increases by 2.\n- You are less likely to suffer accidents when using bladed weapons.\n- +1 combat strength on expeditions if you are holding a bladed weapon.",
+    "Flavor Text": "As they say, a blade in the hand is worth two in the heart.",
+    "Random Description": "Skilled with blades and other sharp weapons."
+  },
+  "Firefighter": {
+    "Chocolate": false,
+    "Effect": "- You will always succeed at extinguishing a fire with an extinguisher, and you can also attempt to extinguish fires without one.\n- Reduces damage from fires and Flamethrowers by 1, and halves accident chance from heat sources.",
+    "Flavor Text": "The Firefighter has great experience which means they will always succeed when using the extinguisher.",
+    "Magebook": true,
+    "Random Description": "Was a volunteer firefighter, and took the job very seriously."
+  },
+  "Fortune Teller": {
+    "Chocolate": true,
+    "Effect": "- Enables the `fortune <player> <type>` command. For 2 AP, once a day, you can read the fortune of a crewmate. <type> is optional and can be 'good' or 'bad' if you want to influence the results. This will give them a random buff or debuff that lasts 4 cycles.",
+    "Flavor Text": "The stars hold many secrets. Their arrangement on a person's birth foretells their future. And only you know how to make sense of it.",
+    "Random Description": "In touch with the mystical nature of the universe.",
+    "Unique": true
+  },
+  "Frugivore": {
+    "Chocolate": false,
+    "Effect": "- You gain +2 AP from eating fruits (or +1 AP if it's a banana).",
+    "Flavor Text": "You terrorize fruits, you adore them, they are your drug. When you make eye contact with a fruit, it over-ripens before you...",
+    "Lost as Mush": true,
+    "Random Description": "Loves fruits of all kinds.",
+    "Unique": true
+  },
+  "Genius": {
+    "Chocolate": false,
+    "Effect": "- Enables the `genius` command, which gives you the Geniusing status once per game. While Geniusing, your next NERON project relay will provide 100% progress (without resetting the available projects), OR your next repair action will not fail.\n- - When taking the skill in Roguelike mode, you will produce two Project Disks.",
+    "Flavor Text": "When divinely enlighted by the flame of consciousness, the genius can find a solution to any problem encountered aboard the Daedalus.",
+    "Random Description": "Prone to awe-inspiring bursts of epiphany.",
+    "Unique": true
+  },
+  "Green Thumb": {
+    "Chocolate": false,
+    "Effect": "- When taking this skill, two empty Hydropots appear in your inventory.\n- When grafting a fruit, the hybrid has a shorter growth cycle.",
+    "Flavor Text": "Plants grow naturally in your presence, you only require to speak to them with a languishing gaze for them to bear beautiful fruit.",
+    "Random Description": "A natural at bringing up plants.",
+    "Unique": true
+  },
+  "Gunner": {
+    "Chocolate": false,
+    "Effect": "- Doubles damage and hit chance when firing from a turret.",
+    "Flavor Text": "At least someone will show them how it's done.",
+    "Random Description": "Feels right at home in the seat of a big gun.",
+    "Unique": true
+  },
+  "Hair Trigger": {
+    "Chocolate": true,
+    "Effect": "- +2 shoot points a day.\n- Enables action `burst` which toggles Burst Fire. If you shoot while Burst Fire is on and spend shoot points, you spend one more shoot point to fire up to 4 times at once (as many as the gun/craft's energy allows) with reduced accuracy.",
+    "Flavor Text": "Guns are so familiar in your hands, you can turn anything with bullets into an assault weapon.",
+    "Random Description": "Shoots first, asks questions later.",
+    "Skill AP Maximum": 4,
+    "Skill AP Per Day": 2,
+    "Skill AP Type": "shoot",
+    "Unique": true
+  },
+  "Hauler": {
+    "Chocolate": false,
+    "Effect": "- You have one extra inventory slot.\n- You can move heavy objects without penalty.",
+    "Flavor Text": "They may call it 'dumb labor', but you'd like to see **them** carry a large kitchen appliance in each hand and still have room for a snack and a coffee.",
+    "Random Description": "Has a history with physically-intensive labor, and it shows."
+  },
+  "Hygienist": {
+    "Chocolate": false,
+    "Effect": "- When targeted for a spore, there is a 50% chance that the spore is immediately destroyed.\n- You also have a 50% chance to resist an illness.",
+    "Flavor Text": "You may be a brute, but you're full-on when it comes to hygiene. Don't touch me, you'll get me dirty!",
+    "Random Description": "Knows that a healthy lifestyle starts with a clean one.",
+    "Unique": true
+  },
+  "Inspiration": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- Enables the `inspire <player>` command which, for 1 AP, wakes up a crewmate and gives them +1 AP/MP per cycle for 6 cycles. Ends if the target uses a bed. Can only be used once per day.",
+    "Flavor Text": "Get up! The Divine has called upon you to do great things!",
+    "Random Description": "Has an inspiring, spiritual presence.",
+    "Unique": true
+  },
+  "Intimidating": {
+    "Chocolate": false,
+    "Effect": "- Enables `intimidate` action which for 1 AP causes a player to lose 2 AP and 4 MP, or cause an NPC to cower in fear for a while.",
+    "Flavor Text": "When you stare at them with bloodlust in your eyes, even Mush can become paralyzed with fear.",
+    "Random Description": "Has a gaze that pierces into one's soul.",
+    "Unique": true
+  },
+  "IT Expert": {
+    "Chocolate": false,
+    "Effect": "- Gives 2 IT points per day, which is automatically used in place of AP when performing actions at a terminal.\n- Doubles your chance of success with the Hacker Kit.\n- Triples your chance of repairing a Terminal (applies in place of Technician's doubled chance)",
+    "Flavor Text": "The IT Expert is at home as soon as they are in front of a screen. They manipulate the nexus, navigation and communications terminals with ease.",
+    "Magebook": true,
+    "Random Description": "Spent their whole life around computers.",
+    "Skill AP Maximum": 4,
+    "Skill AP Per Day": 2,
+    "Skill AP Type": "it"
+  },
+  "Jack Of All Trades": {
+    "Chocolate": false,
+    "Effect": "- Gives 2 random skill points a day, ignoring any caps.\n- Slightly increases your base chance of completing any task.",
+    "Flavor Text": "You're really good at absorbing techniques and factoids that help with everyday life. Or survival in deep space, same difference.",
+    "Magebook": true,
+    "Random Description": "Absorbs any and all knowledge they can."
+  },
+  "Keen Eye": {
+    "Chocolate": true,
+    "Effect": "- When entering a room, 50% chance to notice if an item has been hidden, or if someone has attempted to search here, since the last time you entered the room.\n- Doubles the chance of finding someone MIA on an expo, and doubles that person's survival chances if found.\n- Halves the chance of attracting stowaways on expos.",
+    "Flavor Text": "It pays to have good perception when you can't afford to spend time searching.",
+    "Random Description": "Has good passive perception.",
+    "Unique": true
+  },
+  "Leader": {
+    "Chocolate": false,
+    "Effect": "- Enables the `speech` command which for 2 AP increases the morale of every crew member in the same room by 2.",
+    "Flavor Text": "A charismatic leader knows how to effectively lead a team and increase morale using powerful, passionate speeches.",
+    "Level 1": true,
+    "Random Description": "An expert wordsmith who knows how to motivate the masses."
+  },
+  "Lethargy": {
+    "Chocolate": false,
+    "Effect": "- Doubles your max AP. Every cycle you spend in a row lying in bed (if you've been in bed for at least 4 cycles in a row), you will gain +1 AP.",
+    "Flavor Text": "You're only awake for 4h per day, but even in that short time, you can achieve miracles!",
+    "Limited": true,
+    "Random Description": "Is often seen sleeping.",
+    "Unique": true
+  },
+  "Logistics Expert": {
+    "Chocolate": false,
+    "Effect": "- Every cycle, a random crewmate in the same room as you gains 1 AP.",
+    "Flavor Text": "You personally oversee the organisation of every task aboard the Daedalus in order to maximize the efficiency of every one of your teammates.",
+    "Magebook": true,
+    "Random Description": "Knows how to increase productivity in every little thing."
+  },
+  "Lucky": {
+    "Chocolate": true,
+    "Effect": "- The chance of getting hurt by accidents is cut in half.\n- When on an expedition, 50% chance to avoid a negative event.",
+    "Flavor Text": "You've turned good luck into an art. You can almost rely on it... almost.",
+    "Random Description": "Good luck seems to permeate their very being."
+  },
+  "Mankind's Only Hope": {
+    "Chocolate": false,
+    "Effect": "- As long as you are alive, the crew loses 1 less morale on day change.\n- You and anyone else in the same room have a 33% chance of reducing morale damage by 1.",
+    "Flavor Text": "Your unique immune system makes you the last hope for humanity. As long as you stay alive, we'll have a shot at combating the Mush invasion.",
+    "Level 1": true,
+    "Lost as Mush": true,
+    "Random Description": "A beacon of hope and inspiration to everyone.",
+    "Unique": true
+  },
+  "Medic": {
+    "Can Read Pills": true,
+    "Chocolate": false,
+    "Effect": "- You can read the properties of pills.\n- Healing actions restore an additional 2 HP and can perform surgery to fix the target's injuries.\n- You also gain +4% progress when relaying research.",
+    "Flavor Text": "Medics have full medical training, allowing them to carry out rapid, appropriate procedures. They are also skilled in surgery.",
+    "Magebook": true,
+    "Random Description": "A skilled medical professional and surgeon."
+  },
+  "Meds Junkie": {
+    "Can Read Pills": true,
+    "Chocolate": false,
+    "Effect": "- You can read the properties of pills.\n- You can consume one pill per cycle as opposed to one per day.\n- Pills that give resources increase the given amount by 1.",
+    "Flavor Text": "Years of being a lab rat have given you an abnormally high tolerance to drugs, but how much can your stomach handle?",
+    "Lost as Mush": true,
+    "Random Description": "Has built up a tolerance to various medication.",
+    "Unique": true
+  },
+  "Metalworker": {
+    "Chocolate": false,
+    "Effect": "- Enables the `metalworker` action which can be used for free once a day in any storage room. This has a chance of producing a random item, usually Scrap Metal or something similar.\n- While on an expo, increases the amount of scrap found in a Salvage event by 1.",
+    "Flavor Text": "It seems pretty clear that you're a really productive person.",
+    "Random Description": "Familiar with all kinds of materials used in construction and electronics."
+  },
+  "Meticulous": {
+    "Chocolate": false,
+    "Effect": "- You cannot get dirty, as though you are always holding a Stainproof Apron.",
+    "Flavor Text": "Your work is clean, very clean, getting cleaner, ever cleaner. You are genuinely obsessed by cleanliness, but this has its advantages.",
+    "Random Description": "Somehow able to keep clean in even the dirtiest work environments.",
+    "Unique": true
+  },
+  "Motivator": {
+    "Chocolate": false,
+    "Effect": "- Enables the `motivate` command which for 2 AP provides 3 MP to every crewmember in the same room.",
+    "Flavor Text": "Bla bla bla... Whatever",
+    "Random Description": "Tends to ramble on about nothing in particular.",
+    "Unique": true
+  },
+  "Mycologist": {
+    "Chocolate": false,
+    "Effect": "- When you heal a crewmate, they lose a spore.",
+    "Flavor Text": "The mycologist can treat fungal infections in the Medlab or using a Medikit.",
+    "Lost as Mush": true,
+    "Random Description": "Was hand-picked for their expertise in mycology.",
+    "Unique": true
+  },
+  "NERON's Only Friend": {
+    "Chocolate": false,
+    "Effect": "- While you are alive, relaying NERON projects is guaranteed to yield the maximum possible percentage.",
+    "Flavor Text": "As soon as you are aboard the ship, NERON is content, its programs run without a hitch and its performance is noticeably improved.",
+    "Random Description": "The only one who seems to understand the ship's computer.",
+    "Unique": true
+  },
+  "Nurse": {
+    "Can Read Pills": true,
+    "Chocolate": false,
+    "Effect": "- You can read the properties of pills.\n- When someone else carries out a heal action in the same room as you, +1 to the amount healed.\n- Gain 1 heal point a day, which is used automatically in place of AP when performing healing actions.\n- Enables `bandage` command which consumes a heal point to create a bandage.",
+    "Flavor Text": "Always ready to help!",
+    "Random Description": "A doctor's assistant, and one of the best.",
+    "Skill AP Maximum": 2,
+    "Skill AP Per Day": 1,
+    "Skill AP Type": "heal"
+  },
+  "Observant": {
+    "Chocolate": false,
+    "Effect": "- The Search option costs 1 less AP. (This cost reduction only has a 50% chance of occurring when the lights are off)\n- When a covert action happens in the same room as you, there's a 25% chance to reveal it as though you were a camera.",
+    "Flavor Text": "Nothing gets past your perception.",
+    "Random Description": "Knows what to look for. Not much misses their gaze.",
+    "Unique": true
+  },
+  "Opportunist": {
+    "Chocolate": false,
+    "Effect": "- Gain 5 AP the first time you get each Title (Commander, Comms Officer, NERON Admin).\n- If you assassinate someone with a title, you will earn their title on cycle change.",
+    "Flavor Text": "The opportunist waits for any chance to ascend in the ship's hierarchy, they will miss no opportunity.",
+    "Lost as Mush": true,
+    "Random Description": "Knows how to take advantage of an opportunity.",
+    "Unique": true
+  },
+  "Panic": {
+    "Chocolate": false,
+    "Effect": "- Panic attacks are more frequent: The more Mush are on board, the higher the chance of contracting one every cycle.\n- +2 AP/MP each time you have a panic attack.",
+    "Flavor Text": "Seeing the Mush take over your beloved ship drives you to your limits.",
+    "Lost as Mush": true,
+    "Random Description": "Prone to panic attacks, but seems to have mastery over them.",
+    "Unique": true
+  },
+  "Paranoid": {
+    "Chocolate": false,
+    "Effect": "- When taking this skill, two Cameras appear in your inventory.",
+    "Flavor Text": "The paranoid crewmember always believes their crewmates to be potentially dangerous, they always watch their back using their extra cameras.",
+    "Limited": true,
+    "Random Description": "Always overprepared for the worst of outcomes.",
+    "Unique": true
+  },
+  "Perfect Vision": {
+    "Alien": true,
+    "Can Read Food": true,
+    "Can Read Fruit": true,
+    "Can Read Pills": true,
+    "Chocolate": true,
+    "Effect": "- Enables the `focus <player>` action, which for 2 AP reveals some details about a player that would normally be hidden.\n- Allows you to read the properties of all consumables.",
+    "Flavor Text": "Your compound eyes allow you to see things in near-microscopic detail.",
+    "Random Description": "Capable of spotting details that the average person would easily miss.",
+    "Unique": true
+  },
+  "Physicist": {
+    "Chocolate": false,
+    "Effect": "- +1 PILGRED point per day, which is automatically used in place of AP to relay PILGRED repairs. Also increases the percentage gained when doing so.",
+    "Flavor Text": "The Physicist is a high flier in the field of physics research. Their understanding of quantum mechanics and even the essence of the strings that make up our universe is their major talent. They also have the advantage when repairing PILGRED.",
+    "Level 1": true,
+    "Random Description": "A veritable genius when it comes to FTL travel.",
+    "Skill AP Maximum": 2,
+    "Skill AP Per Day": 1,
+    "Skill AP Type": "pilgred",
+    "Unique": true
+  },
+  "Pickpocket": {
+    "Chocolate": true,
+    "Effect": "- Enables the `pickpocket <player>` and `plant <player> <item>` commands. Both are covert actions and cost 2 AP. `pickpocket` will steal a random item from the target. `plant` will plant the item into the target's inventory.",
+    "Flavor Text": "Keep a close eye on your bag if there's a Pickpocket loose on the ship... what's yours is theirs, and what's theirs is also theirs.",
+    "Random Description": "Can't seem to keep their hands to themselves.",
+    "Unique": true
+  },
+  "Pilot": {
+    "Chocolate": false,
+    "Effect": "- You cause no accidents when piloting a spacecraft.\n- Your base accuracy when shooting from a Patrol Ship doubles.",
+    "Flavor Text": "An expert in manoeuvring the Icarus, Pasiphae and Patroller craft. Their aerial mastery is impressive.",
+    "Level 1": true,
+    "Magebook": true,
+    "Random Description": "Has some experience in the cockpit of a patroller."
+  },
+  "Politician": {
+    "Chocolate": false,
+    "Effect": "- Enables `coup` command which can be performed in the Nexus for 3 AP. When used, you will be made the highest-priority Commander and will be assigned the title next cycle.",
+    "Flavor Text": "Either they are with you or against you.",
+    "Random Description": "Knows how to turn any system on its head.",
+    "Unique": true
+  },
+  "Polymath": {
+    "Chocolate": false,
+    "Effect": "- Increases each unique skill AP generation by 1, and max by 2.\n- Allows you to see up to 2 days back when looking at chatlogs.\n- +2 max open frequencies.",
+    "Flavor Text": "Knowledge is always moving, state is overrated.",
+    "Random Description": "An expert at multitasking and retaining information.",
+    "Unique": true
+  },
+  "Polyvalent": {
+    "Can Read Fruit": true,
+    "Can Read Pills": true,
+    "Chocolate": false,
+    "Effect": "- You have all of the passive benefits of the Botanist, Diplomat, and Biologist skills, but none of their actions or resources.",
+    "Flavor Text": "Your education didn't stop at just one degree... or even two...",
+    "Random Description": "Overqualified for the job. Multiple jobs at that.",
+    "Unique": true
+  },
+  "Possession": {
+    "Chocolate": true,
+    "Effect": "- Enables the `possess <npc>` command. For 1 AP, allows you to take control of the target drone or non-humanoid creature. If the target is owned by you, the cost is 0 AP. You can then perform actions the target would be capable of, using your own AP/MP (use `actions` to see a list). You will return to your own body if it takes damage, or if you type `return`.",
+    "Flavor Text": "Certain strong-willed people are capable of directing lesser creatures and drones to do their bidding, almost as though they're controlling them directly...",
+    "Random Description": "Has an uncanny connection with animals.",
+    "Unique": true
+  },
+  "Premonition": {
+    "Chocolate": false,
+    "Effect": "- Enables the `Premonition` command which costs 1 morale and reveals the last action of any crewmate.",
+    "Flavor Text": "Your intuition never fails, you can see the most recent activities of a teammate in the form of a vivid flashback. It's practical, but gives you a monster headache!",
+    "Lost as Mush": true,
+    "Random Description": "Prone to sudden headaches, and the visions they bring.",
+    "Unique": true
+  },
+  "Radio Expert": {
+    "Chocolate": false,
+    "Effect": "- When connecting to Sol, you provide double progress yourself, and +50% progress for anyone in the same room.",
+    "Flavor Text": "The radio expert can decode the most complicated jumble of spatial waves in order to rebuild or send messages to the other end of the universe.",
+    "Level 1": true,
+    "Magebook": true,
+    "Random Description": "Good at handling communications equipment."
+  },
+  "Rebel": {
+    "Chocolate": false,
+    "Effect": "- Doubles progress gained when decoding a Rebel base signal.\n- Gives a 50% chance to reroll a 'bad' Xyloph entry (Nothing, Snow, Magnetite, or Trojan).",
+    "Flavor Text": "Your links to the anti-mush resistance allow you to understand and decode rebel transmissions much quicker than any other radio expert.",
+    "Random Description": "A high-ranking member of the resistance.",
+    "Unique": true
+  },
+  "Robotics Expert": {
+    "Chocolate": false,
+    "Effect": "- When taking this skill, a Drone Remote and a blueprint for a Support Drone appears in your inventory.\n- Can use the Drone Remote to view locations of all drones on the ship and issue orders.\n- You can upgrade a drone with the `upgrade <drone> <type>` command, which costs 2 Scrap Metal and 2 AP. See `!info upgrade` for a list of valid upgrade types.",
+    "Flavor Text": "The Robotics Expert can create and operate drones in any way they see fit.",
+    "Level 1": true,
+    "Magebook": true,
+    "Random Description": "Handy both with software and hardware."
+  },
+  "Scavenger": {
+    "Chocolate": true,
+    "Effect": "- Scrap yield when collecting with the Pasiphae increased by 1 per action.\n- 20% chance of generating extra scrap when collecting.\n- +1 scrap gained from Salvage events.",
+    "Flavor Text": "Some might say you're a bit of a hoarder, but in reality, you just really love recycling.",
+    "Random Description": "Made a living from scrapping derelict vehicles and equipment."
+  },
+  "Self-Sacrifice": {
+    "Chocolate": false,
+    "Effect": "- If your morale reaches 0, you will not die; instead, you will lose 1 HP per cycle.",
+    "Flavor Text": "Certain particularly resilient people can withstand the unthinkable, but this comes at a cost.",
+    "Lost as Mush": true,
+    "Random Description": "Willing to endure the worst of times for the sake of the crew.",
+    "Unique": true
+  },
+  "Shooter": {
+    "Chocolate": false,
+    "Effect": "- Gives 2 shoot points per day, which are automatically used in place of AP when you shoot a weapon or turret.\n- When shooting a gun, you are twice as likely to get a headshot, and half as likely to have an accident.\n- Increases held ranged weapon accuracy by 30%.\n- Doubles accuracy with turrets.\n- +1 to expedition combat strength when holding a gun.",
+    "Flavor Text": "At ease handling all kinds of weapons.",
+    "Level 1": true,
+    "Magebook": true,
+    "Random Description": "Guns are an extension of their being.",
+    "Skill AP Maximum": 4,
+    "Skill AP Per Day": 2,
+    "Skill AP Type": "shoot"
+  },
+  "Shrink": {
+    "Chocolate": false,
+    "Effect": "- Gives 1 morale per cycle to anyone laying down in the same room as you. This will also cure their psychological illnesses.\n- Enables the `comfort <player>` action, which grants 2 morale to the target for 1 AP.",
+    "Flavor Text": "The Shrink is in charge of psychological support. They are able to keep morale high and treat psychological illnesses.",
+    "Level 1": true,
+    "Magebook": true,
+    "Random Description": "A renowned therapist.",
+    "Unique": true
+  },
+  "Smelter": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- Creates the Forge in Front Storage.\n- Enables the `refine` command, which allows you to refine two Scrap Metal into three Refined Metal at the Forge. Refined Metal gives bonus hull points if used for repairs, and can be used as substitutes for Scrap Metal when building and crafting.",
+    "Flavor Text": "Higher-quality metal yields higher-quality crafts. It's just common sense.",
+    "Random Description": "Well-versed in metallurgy and refinement of materials.",
+    "Unique": true
+  },
+  "Sneak": {
+    "Chocolate": false,
+    "Effect": "- 25% additional chance to dodge attacks.\n- You can always move past a guarding character in a room.",
+    "Flavor Text": "You are of a fearful nature and you instinctively know how to make yourself scarce in order to avoid any and all attempts at physical contact.",
+    "Random Description": "Has a minimal presence. It's easy to lose track of them.",
+    "Unique": true
+  },
+  "Solid": {
+    "Chocolate": false,
+    "Effect": "- +1 to unarmed combat damage.\n- When carrying a heavy object, you suffer no movement penalty.\n- Enables the `evict <player>` action, which kicks the player out into a random adjacent room for 2 AP.",
+    "Flavor Text": "You'll incur no penalties for carrying heavy objects. Also useful for hand-to-hand combat.",
+    "Level 1": true,
+    "Random Description": "Has a sturdy frame."
+  },
+  "Sprinter": {
+    "Chocolate": false,
+    "Effect": "- When converting AP to MP, you gain 2 additional MP. Does not stack with the Anti-Grav Scooter/Rolling Boulder.\n- +1 zone explored per trip on an expo.",
+    "Flavor Text": "The Sprinter always puts their best foot forward! They get additional Movement Points.",
+    "Level 1": true,
+    "Magebook": true,
+    "Random Description": "Light on their feet, and not so easy to tire."
+  },
+  "Strateguru": {
+    "Chocolate": false,
+    "Effect": "- 50% of chance of reducing each wave of Hunters by 33%.",
+    "Flavor Text": "After displaying a certain degree of megalomania, it can be mistaken for talent. You are an expert in intergalactic warfare, but everyone thinks you're crazy.",
+    "Random Description": "Served as an officer of war.",
+    "Unique": true
+  },
+  "Supervisor": {
+    "Chocolate": false,
+    "Effect": "- Increases action success chances of anyone in the same room as you by 20%. You can toggle this on or off with `supervise` (on by default).",
+    "Flavor Text": "You know how to keep everyone working at maximum efficiency. Just your hawk-eyed gaze is enough...",
+    "Random Description": "Just their presence is enough to get everyone working harder.",
+    "Unique": true
+  },
+  "Survivalist": {
+    "Chocolate": false,
+    "Effect": "- Personal damage from expo events is reduced by 1.\n- +1 Alien Steak gained on Provision events.\n- You are the last to die in a Death event.\n- If you go MIA, your chance of being found dead is halved.",
+    "Flavor Text": "The Survivalist is great to have on exploration missions. They can defend themselves more effectively against extra-terrestrial life forms and generally deal with these encounters better than anyone else.",
+    "Random Description": "Knows the ways of the wild."
+  },
+  "Tamer": {
+    "Chocolate": true,
+    "Effect": "- On learning the skill, gain a random (or predefined) pet.\n- Success chance of taming creatures is increased by 50%.\n- Gives access to the `train` and `order` actions for tame creatures.",
+    "Flavor Text": "Behavioral patterns among less evolved creatures are fairly universal. You know how to take advantage of that, and make some new friends in the process!",
+    "Magebook": true,
+    "Random Description": "Loves animals, and knows the quickest way into their hearts."
+  },
+  "Technician": {
+    "Chocolate": false,
+    "Effect": "- Gives 1 tech point per day, which is automatically used in place of AP when fixing, reinforcing, and dismantling objects.\n- Doubles your chance of fixing a broken object.\n- Enables `reinforce <object>` and `dismantle <object>` commands.",
+    "Flavor Text": "Qualified to repair materials, equipment and the hull of the Daedalus.",
+    "Magebook": true,
+    "Random Description": "Knows how machines tick.",
+    "Skill AP Maximum": 2,
+    "Skill AP Per Day": 1,
+    "Skill AP Type": "tech"
+  },
+  "The Optimist": {
+    "Chocolate": false,
+    "Effect": "- You lose one less point of morale on day change.\n- Reduces morale loss of panic attacks in the same room by 1.\n- +2 max morale.",
+    "Flavor Text": "The end of humanity... worse things happen at sea, right?",
+    "Random Description": "Is a seemingly endless well of positivity."
+  },
+  "Tinker": {
+    "Chocolate": true,
+    "Effect": "- Gives 4 tech points per day, which is automatically used in place of AP when fixing, reinforcing, and dismantling objects.",
+    "Flavor Text": "You have spent a lot of time playing around with tools and have a good grasp on how they operate.",
+    "Magebook": true,
+    "Random Description": "Spends a lot of their free time tinkering with machinery.",
+    "Skill AP Maximum": 4,
+    "Skill AP Per Day": 4,
+    "Skill AP Type": "tech"
+  },
+  "Torturer": {
+    "Chocolate": false,
+    "Effect": "- Enables the `torture <player>` action, which inflicts 1 HP of damage on the target and causes them to reveal their most recent actions to you. The lower the target's HP, the more actions are revealed.",
+    "Flavor Text": "The torturer knows all the pressure points and most sensitive areas with which they can convey their most important message... 'You WILL talk.'",
+    "Random Description": "Has a no-nonsense approach to getting information out of fellow crew.",
+    "Unique": true
+  },
+  "Tracker": {
+    "Chocolate": false,
+    "Effect": "- You can view room logs up to 2 days old, and you can see which rooms a player enters from and leaves to.\n- Can use `logs all` to view all room logs you can see with one command.\n- Allows you to print The List on the Tabulatrix, which provides a short list of characters on the current ship, of which one is guaranteed to be mush.",
+    "Flavor Text": "The tracker can see the comings and going of every team member. Furthermore, they can print any research results during the game via the Tabulatrix. This provides a list of players of which at least one is Mush.",
+    "Level 1": true,
+    "Random Description": "Comes off as the protagonist of a detective novel.",
+    "Unique": true
+  },
+  "Trailblazer": {
+    "Chocolate": true,
+    "Effect": "- Landing on a planet costs 2 less AP.\n- +6 zones if launching an expo from a patroller.\n- You are unable to become lost in an MIA event.\n- When entering a zone that contains a Fight event while in a solo expo, you will encounter a Wander event instead.",
+    "Flavor Text": "Your internal compass ensures that you can find your way, and gives you the confidence to take any alien planet head-on!",
+    "Random Description": "Solo missions are their bread and butter.",
+    "Unique": true
+  },
+  "Treasure Hunter": {
+    "Chocolate": true,
+    "Effect": "- While on an expedition, the chance of finding an artifact or a map fragment in a zone is increased by 50%.",
+    "Flavor Text": "As it turns out, even aliens tend to hide their treasure in the same places. And you know where those places are.",
+    "Magebook": true,
+    "Random Description": "An infamous interstellar tomb raider.",
+    "Unique": true
+  },
+  "U-Turn": {
+    "Chocolate": false,
+    "Effect": "- Enables the `u-turn` command, which can be used during an expo for 2 AP to immediately end it and cause everyone to return.",
+    "Flavor Text": "You've got to know how to change your certitudes.",
+    "Random Description": "Knows when to hold 'em, and when to fold 'em.",
+    "Unique": true
+  },
+  "Victimizer": {
+    "Chocolate": false,
+    "Effect": "- Enables the `victimize <player>` command, which makes <player> into a Pariah for 1 AP. The Pariah's covert actions become secret, and their chance to succeed on actions is reduced by 20%. This also cancels an active ceasefire by the target.",
+    "Flavor Text": "Certain well-targeted remarks can have unexpected results.",
+    "Random Description": "Quick to place the blame, and good at getting people to agree with them.",
+    "Unique": true
+  },
+  "Watchman": {
+    "Chocolate": true,
+    "Effect": "- You can see room descriptions and logs of any other camera'd room as if you were a Tracker.\n- You can hear room chat of any camera'd room.\n- You can send a chat message into a target camera'd room with `?xx message` where `xx` is the target room id.",
+    "Flavor Text": "The cameras are always watching, always recording. Just intercept the signal, and suddenly you have eyes and ears all over the Daedalus.",
+    "Random Description": "Likes to keep tabs on everyone.",
+    "Unique": true
+  },
+  "Workaholic": {
+    "Chocolate": true,
+    "Effect": "- Enables the `overtime` command, which converts 2 of your HP into 1 AP. When using this effect, you cannot be healed until next cycle.",
+    "Flavor Text": "The Workaholic can summon energy from the deepest reserves of their very being, but this comes at a cost...",
+    "Random Description": "A hard worker, sometimes to their own detriment.",
+    "Unique": true
+  },
+  "Wrestler": {
+    "Chocolate": false,
+    "Effect": "- +2 to unarmed combat damage.\n- 50% chance to prevent an NPC from retaliating on an unarmed attack.\n- Enables the `evict <player>` action, which kicks the player out into a random adjacent room for 2 AP.",
+    "Flavor Text": "The wrestler's german suplex makes the vertebrae of your enemies tremble.",
+    "Limited": true,
+    "Random Description": "A master of close-quarters combat.",
+    "Unique": true
+  },
+  "Xenobiologist": {
+    "Alien": true,
+    "Chocolate": true,
+    "Effect": "- Enables the `experiment <player>` action, which for 2 AP carries out an \"experiment\" on a crewmate costing them 2 HP. Base 50% progressive chance of success. On success, creates \"Research Notes\" which unlocks a new research depending on the crewmate when brought to the lab. Cannot be used if research notes have already been generated for that crewmate. Has a small chance to reveal a Mush.",
+    "Flavor Text": "You have devoted your life to the study of alien lifeforms.",
+    "Random Description": "Obsessed with cataloguing the biology of alien species.",
+    "Unique": true
+  }
+}

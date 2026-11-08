@@ -41,4 +41,45 @@ th, td {
     color:#bb0000;
     float:none;
 }
+
+#glory_path_container {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 60%;
+}
+
+#glory_path_container > label {
+    padding: 3px;
+}
+
 tr:nth-child(even) {background-color: #f2f2f2;}
+
+#skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    width: 95%;
+}
+
+#skills-container > div > label {
+    padding-left: 5px;
+}
+
+#skills-container > div:nth-child(8n+1),
+#skills-container > div:nth-child(8n+2),
+#skills-container > div:nth-child(8n+3),
+#skills-container > div:nth-child(8n+4){
+    background-color: #f2f2f2;
+}
+
+#traits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 60%;
+}
+#traits-container > div {
+    padding: 3px;
+}
+#traits-container > div > label {
+    padding-left: 5px;
+}

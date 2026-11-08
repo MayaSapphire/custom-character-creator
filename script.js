@@ -137,3 +137,5 @@ function makeLoadout() {
     document.getElementById("Output").value = output;
 
 }
+
+

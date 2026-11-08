@@ -1,0 +1,122 @@
+{
+  "Adventurer's Hat": {
+    "Flavor Text": "You have a sweet hat that's been with you through thick and thin!",
+    "Description": "Counts as a separate inventory item on expeditions. When encountering an Item Lost event, and this hat is targeted, you lose 1 morale and this trait.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "Agoraphobia": {
+
+  },
+  "Ailurophobia": {
+
+  },
+  "Asocial": {
+    "Flavor Text": "You lose morale if you share a room with others over cycle change. Also enables bringing a pet aboard.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "Bionic Arm": {
+    "Flavor Text": "One arm has been replaced with a state-of-the-art bionic.",
+    "Description": "While your bionic arm is equipped, you have +1 to all combat strength against non-crew and can carry more. However, without it, all actions cost 1 more AP. If it breaks, fixing it is a high priority.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "Capricious": {
+    "Flavor Text": "You're a pathological troublemaker. Resisting the urge will tax your sanity.",
+    "Description": "Every day, you get a random objective which is usually fulfilled by performing a certain action. If you do not complete this objective by the end of the day, you lose 3 morale.",
+    "Visible": true,
+    "Selectable": true,
+    "Can Spawn On Random Characters": false
+  },
+  "Cat Allergy": {
+
+  },
+  "Chronic Illness": {
+    "Flavor Text": "Your health is deteriorating, but this gives you the will to push on.",
+    "Description": "You have a small chance of taking 2 HP damage every time you spend AP. You also have a small chance of reducing morale damage by 1.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "Chronic Vertigo": {
+
+  },
+  "Depression": {
+
+  },
+  "Disabled": {
+    "Flavor Text": "Moving is more costly for you, but others can help you.",
+    "Description": "-2 MP on AP/MP conversions. If you leave the room while someone else is in the room, you move without spending MP.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "First Timer": {
+    "Flavor Text": "You have never done it. Your first time will max out your morale.",
+    "Description": "Doing the thing with another player will set your morale to its maximum value, then remove this trait.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "Germaphobe": {
+    "Flavor Text": "You lose morale if you are dirty on cycle change.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "Globophobia": {
+
+  },
+  "Hyperactive": {
+    "Flavor Text": "You don't gain AP from beds, but you gain +1 MP per cycle.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "Illiterate": {
+    "Flavor Text": "You cannot read written words.",
+    "Description": "Terminal screens appear as gibberish to you. +1 AP cost for actions at any terminal. You cannot read physical items either (books, post-its, etc) but you can still use Mage Books (as the knowledge is directly implanted). Fortunately, your trackie has text-to-speech functionality, so things like the map and Astropad are unaffected.",
+    "Visible": true,
+    "Selectable": true,
+    "Can Spawn On Random Characters": false
+  },
+  "Immunized": {
+    "Flavor Text": "You are immune to becoming Mush.",
+    "Description": "You cannot be infected with spores, thus you are always human and can be trusted - but this also makes you a bigger target for the Mush...",
+    "Selectable": true,
+    "Visible": true,
+    "Can Spawn On Random Characters": false
+  },
+  "Minor": {
+    "Flavor Text": "You're not quite an adult. Life is simpler, but also more dangerous.",
+    "Description": "This has myriad effects:\n- Slightly increased chances of accidents and getting dirty.\n- Illnesses and injuries have slightly worse effects.\n- When you die, other crewmembers lose 2 morale instead of 1.\n- You cannot flirt or DTT, but you can use and benefit from the `befriend` and `play` commands.\n- You start the game with a Teddy Bear. The Teddy Bear works drastically more often for you.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "Monocular": {
+    "Flavor Text": "You only have one functional eye. This makes certain tasks more difficult, but your other senses have heightened to compensate.",
+    "Description": "Accuracy for shoot actions is reduced, and accident chance is slightly increased. However, you have a better chance to dodge attacks, and a small chance of negating physical injuries entirely.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "Pacifist": {
+    "Flavor Text": "Aggressive actions near you are more costly.",
+    "Description": "Increases the AP cost of aggressive actions in the same room as you by 2.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "Paranoia": {
+
+  },
+  "Sixth Sense": {
+    "Flavor Text": "You receive visions whenever someone does something secret.",
+    "Description": "Anytime a secret or covert action is performed by someone else that is NOT revealed, 33% chance that you'll lose 1 morale on the next cycle change.",
+    "Selectable": true,
+    "Visible": true
+  },
+  "Telepath": {
+    "Flavor Text": "You can hear and project thoughts. This has myriad applications, but sometimes they won't shut up...",
+    "Description": "Enables radio/map access without a trackie. Immune to Mute and Deaf status. However, increases the chance and intensity of psychological disorders, and they are much harder to cure.",
+    "Visible": true,
+    "Selectable": true
+  },
+  "Weapon Phobia": {
+
+  }
+}
